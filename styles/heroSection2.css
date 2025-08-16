@@ -1,0 +1,179 @@
+:root{
+  --hero2-bg: #EFEFF5; /* Match image BG for blending */
+  --hero2-text: #000;
+  --hero2-accent: #FF4B4B;
+  --hero2-primary: sienna;
+  --hero2-primary-hover-bg: #e04343;
+  --hero2-primary-hover-color: greenyellow;
+  --hero2-secondary: coral;
+  --hero2-secondary-hover-bg: wheat;
+  --hero2-secondary-hover-color: red;
+  --hero2-chip-bg: greenyellow;
+  --hero2-chip-color: red;
+  --hero2-chip-hover-bg: coral;
+  --hero2-chip-hover-color: whitesmoke;
+}
+
+.hero2-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--hero2-bg);
+  color: var(--hero2-text);
+  padding: 60px 20px;
+}
+
+/* Header / content column */
+.hero2-header {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+/* Small subtitle above the heading */
+.hero2-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--hero2-accent);
+  margin-bottom: 16px;
+}
+
+/* Main heading */
+.hero2-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Description paragraph */
+.hero2-description {
+  font-size: 18px;
+  color: var(--hero2-text);
+  margin-bottom: 30px;
+}
+
+/* CTA wrapper and buttons */
+.hero2-cta-wrap {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero2-cta {
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Primary CTA (keeps original color intent) */
+.hero2-cta-primary {
+  color: var(--hero2-primary);
+  background: transparent;
+}
+.hero2-cta-primary:hover {
+  background-color: var(--hero2-primary-hover-bg);
+  color: var(--hero2-primary-hover-color);
+}
+
+/* Secondary CTA */
+.hero2-cta-secondary {
+  color: var(--hero2-secondary);
+  background: transparent;
+}
+.hero2-cta-secondary:hover {
+  background-color: var(--hero2-secondary-hover-bg);
+  color: var(--hero2-secondary-hover-color);
+}
+
+/* Companies image column */
+.hero2-companies {
+  flex: 1 1 500px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero2-companies-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto; /* keep aspect ratio */
+  display: block;
+}
+
+/* Industries / chips full-width row */
+.hero2-industries {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.hero2-industries-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.hero2-industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Individual industry chips */
+.hero2-industry-chip {
+  background-color: var(--hero2-chip-bg);
+  color: var(--hero2-chip-color);
+  padding: 18px 30px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 1.59rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+.hero2-industry-chip:hover {
+  background-color: var(--hero2-chip-hover-bg);
+  color: var(--hero2-chip-hover-color);
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .hero2-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero2-cta-wrap {
+    justify-content: center;
+  }
+
+  /* Slightly reduce heading size on narrower screens */
+  .hero2-heading {
+    font-size: 28px;
+  }
+
+  .hero2-industry-chip {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero2-heading {
+    font-size: 22px;
+  }
+  .hero2-description {
+    font-size: 16px;
+  }
+  .hero2-industry-chip {
+    padding: 10px 14px;
+    font-size: 1rem;
+  }
+}

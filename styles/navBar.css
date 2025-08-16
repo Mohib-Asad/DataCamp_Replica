@@ -1,0 +1,339 @@
+/* === navBar.css (UPDATED) ===
+   Notes:
+   - :root and global * / html / body rules removed
+   - All CSS variables replaced with direct values
+   - Necessary box-sizing applied to key components
+*/
+
+/* Base box-sizing for navbar and relevant components */
+.dc-navbar,
+.dc-navbar .container-fluid,
+.dc-search-box,
+.dropdown-menu.dc-dropdown-mega,
+.dc-dropdown-mega .mega-body,
+.dc-dropdown-mega .mega-grid,
+.dc-dropdown-mega .mega-col,
+.dc-dropdown-mega .dropdown-item,
+.container {
+  box-sizing: border-box;
+}
+
+/* === Navbar Layout === */
+.dc-navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #04192C; /* nav background */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px; /* nav height */
+  padding: 10px 18px;
+  z-index: 1000;
+}
+.dc-navbar { position: relative; }
+
+/* Normalize heights */
+.dc-navbar .navbar-nav,
+.dc-navbar .dc-right-group,
+.dc-navbar .dc-center-nav { display:flex; align-items:center; }
+.dc-navbar .navbar-nav > li,
+.dc-navbar .dc-right-group > * { display:flex; align-items:center; height:2.8rem; }
+
+/* Links */
+.nav-link, .dc-nav-simple {
+  color: white !important;
+  font-size: 1.02rem;
+  padding: 0 0.8rem;
+}
+.nav-link:hover, .dc-nav-simple:hover {
+  color: #3fc0b2 !important; /* accent */
+}
+
+/* Brand */
+.navbar-brand { width:170px; cursor:pointer; transition:opacity .3s ease; }
+.navbar-brand:hover { opacity:.88; }
+
+/* Buttons & toggler */
+.dc-signup a {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 6px 10px;
+  text-decoration: none;
+}
+.dc-signup a:hover {
+  background-color: #3fc0b2;
+  border: 2px solid #3fc0b2;
+  color: #fff;
+}
+.dc-signin a {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 6px 8px;
+  text-decoration: none;
+}
+.dc-signin a:hover { border-color: #3fc0b2; }
+
+/* === MAKE SEARCH / GLOBE / TOGGLER ICONS WHITE === */
+.dc-right-group .btn,
+.dc-right-group .btn i,
+.dc-right-group .btn .bi,
+.navbar-toggler,
+.navbar-toggler i,
+.navbar-toggler .bi {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  background: transparent;
+}
+
+/* Specific: ensure the bootstrap globe icon inherits white */
+.dc-right-group .btn .bi-globe { color: #ffffff; }
+
+/* Toggler: styling */
+.navbar-toggler {
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* If your toggler uses nested spans, style them to show white bars */
+.navbar-toggler .navbar-toggler-icon {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  align-items:center;
+  justify-content:center;
+  padding:2px 6px;
+}
+
+/* Toggler bars */
+.navbar-toggler .navbar-toggler-icon span {
+  display:block;
+  width:20px;
+  height:2.5px;
+  background: #ffffff;
+}
+.navbar-toggler:hover .navbar-toggler-icon span {
+  opacity:0.95;
+  transform: translateX(0);
+}
+
+/* SEARCH BOX styles updated: align directly below navbar */
+/* Search sits directly beneath navbar height (no global vars) */
+.dc-search-box {
+  position: fixed;
+  top: 90px; /* matches navbar height */
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: transparent;
+  padding: 12px 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  transform: none;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity .22s ease, max-height .22s ease, visibility .02s linear;
+  z-index: 3000;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.dc-search-box.visible {
+  visibility: visible;
+  opacity: 1;
+  max-height: 320px;
+  pointer-events: auto;
+}
+
+/* Input */
+.dc-search-box #navSearchInput {
+  width: 100%;
+  padding: .6rem 1rem;
+  border-radius: 40px;
+  border: 4px solid #04192C; /* nav-bg */
+  color: navy;
+  background: linear-gradient(#fff6e5, #fff);
+  box-sizing: border-box;
+}
+#navSearchInput:focus {
+  background: linear-gradient(#3fc0b2, #04192C); /* uses accent + nav-bg */
+  color: wheat;
+}
+
+/* === Mega dropdown defaults (overrides bootstrap) === */
+.dropdown-menu.dc-dropdown-mega {
+  min-width: 0 !important;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.16);
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+  width: 1000px; /* mega width */
+  max-width: calc(100vw - 32px);
+  left: 50% !important;
+  transform: translateX(-50%) translateY(10px);
+  top: calc(100% + 8px);
+  position: absolute;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .22s cubic-bezier(.2,.9,.2,1), visibility .12s;
+  z-index: 3000;
+  display: block;
+}
+
+/* show */
+.nav-item.dropdown.show > .dc-dropdown-mega,
+.dc-dropdown-mega.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* Arrow */
+.dc-dropdown-mega::before{
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.03));
+}
+
+/* Mega body with scrolling */
+.dc-dropdown-mega .mega-body{
+  padding: 24px;          /* mega-pad */
+  max-height: 55vh;       /* mega-max-height */
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Grid: default to 3 columns */
+.dc-dropdown-mega .mega-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* default columns */
+  gap: 22px; /* mega-gap */
+  align-items: start;
+}
+
+/* force 2 / 3 column utility classes */
+.dc-dropdown-mega.cols-2 .mega-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.dc-dropdown-mega.cols-3 .mega-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* Per-column wrapper */
+.dc-dropdown-mega .mega-col {
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Column headings & items */
+.dc-dropdown-mega h5 {
+  margin: 0 0 .35rem 0;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #0b1721;
+}
+
+/* items */
+.dc-dropdown-mega .dropdown-item {
+  display:flex;
+  gap: .6rem;
+  align-items:flex-start;
+  padding:10px 12px;
+  white-space:normal;
+  font-size:14px;
+  color: #0b1721;
+  border-radius:8px;
+  text-decoration:none;
+  transition: background-color .14s ease, transform .12s ease;
+  box-sizing: border-box;
+}
+.dc-dropdown-mega .dropdown-item .item-icon {
+  flex: 0 0 36px;
+  height: 36px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  background: rgba(0,0,0,0.04);
+  font-size:16px;
+}
+.dc-dropdown-mega .dropdown-item .item-body { display:flex; flex-direction:column; min-width:0; }
+.dc-dropdown-mega .item-title { font-weight:600; }
+.dc-dropdown-mega .item-desc { font-size:13px; color:#6b7280; margin-top:3px; }
+
+/* hover/focus */
+.dc-dropdown-mega .dropdown-item:hover,
+.dc-dropdown-mega .dropdown-item:focus{
+  background-color: rgba(63,192,178,0.06);
+  color: #3fc0b2; /* accent */
+  transform: translateX(4px);
+  text-decoration:none;
+}
+
+/* small screens: stacked, full width */
+@media (max-width: 991.98px) {
+  .dc-dropdown-mega {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-left: 0;
+    border-right: 0;
+  }
+  .dc-dropdown-mega::before { display: none; }
+  .dc-dropdown-mega .mega-grid { grid-template-columns: 1fr; gap:12px; }
+  .dc-dropdown-mega .mega-body { padding: 12px; max-height: 60vh; }
+}
+
+/* small style touches kept from original */
+.offcanvas-title{ color: #00FFCC;}
+.bi-book { color: #E83256;}
+.dc-section-title-1 { color: #fb2a54;}
+.bi-gear { color: #345995;}
+.dc-section-title-2 { color: #ADD8E6;}
+.bi-briefcase { color: #f28500;}
+.dc-section-title-3 { color: #FDEE00;}
+.list-unstyled { color: #f1e9da;}
+
+/* Signin / Signup button styles */
+.dc-signin-btn, .dc-signup-btn {
+  text-decoration: none;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  display: block;
+  border-radius: 50px;
+}
+
+.dc-signin-btn { color:#7DF9FF; background-color: #e95e2b; }
+.dc-signin-btn:hover { color: #e95e2b; background-color: #7DF9FF; }
+.dc-signup-btn { background-color: crimson; color: #fcfadc; }
+.dc-signup-btn:hover { background-color: #fcfadc; color: crimson; }

@@ -1,0 +1,166 @@
+/* styles/heroSection4.css */
+
+/* Theme variables */
+:root{
+  --hero4-bg: #7933FF;
+  --hero4-text: #ffffff;
+  --hero4-cta: #0066cc;
+  --hero4-cta-hover: #FF3397;
+  --hero4-shadow: 0 10px 30px rgba(0,0,0,0.22);
+  --hero4-max-width: 1200px;
+  --hero4-gap: 2rem;
+}
+
+/* Section layout */
+.hero4-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--hero4-gap);
+  width: 100%;
+  min-height: 50vh;
+  background-color: var(--hero4-bg);
+  margin-top: 100px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Content card */
+.hero4-report-card {
+  color: var(--hero4-text);
+  line-height: 1.6;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: left;
+  max-width: 620px;         /* sensible content width */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.hero4-heading {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--hero4-text);
+  max-width: 30rem;
+  margin: 0 0 20px 0;
+  line-height: 1.08;
+}
+
+/* Subtitle / supporting text */
+.hero4-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--hero4-text);
+  max-width: 37rem;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+
+/* Download CTA */
+.hero4-download-btn {
+  background-color: var(--hero4-cta);
+  color: var(--hero4-text);
+  border: none;
+  padding: 12px 24px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.22s ease, transform 0.12s ease;
+  display: inline-block;
+}
+.hero4-download-btn:hover,
+.hero4-download-btn:focus {
+  background-color: var(--hero4-cta-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  outline: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+}
+
+/* Image area */
+.hero4-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  width: 100%;
+  max-width: 520px;
+  box-sizing: border-box;
+}
+
+.hero4-image {
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+  display: block;
+  object-fit: contain;
+  box-shadow: var(--hero4-shadow);
+  border-radius: 6px;
+}
+
+/* Constrain section width to center content nicely on very wide screens */
+@media (min-width: 1200px) {
+  .hero4-section {
+    padding: 60px 24px;
+    margin-top: 120px;
+    justify-content: center;
+  }
+  .hero4-section > .hero4-report-card,
+  .hero4-section > .hero4-image-wrap {
+    flex: 0 0 auto;
+  }
+}
+
+/* Responsive: stack on narrower screens */
+@media (max-width: 992px) {
+  .hero4-section {
+    gap: 1.5rem;
+    padding: 36px 18px;
+    margin-top: 80px;
+  }
+  .hero4-report-card {
+    padding: 24px;
+    text-align: left;
+  }
+  .hero4-image-wrap {
+    max-width: 460px;
+  }
+}
+
+/* Mobile: center text and stack vertically */
+@media (max-width: 480px) {
+  .hero4-section {
+    padding: 20px 12px;
+    margin-top: 40px;
+    min-height: auto;
+  }
+  .hero4-report-card {
+    padding: 16px;
+    text-align: center;
+  }
+  .hero4-heading,
+  .hero4-subtitle {
+    text-align: center;
+    max-width: 100%;
+  }
+  .hero4-download-btn {
+    display: block;
+    margin: 18px auto 0;
+    width: 100%;
+    max-width: 260px;
+  }
+  .hero4-image-wrap {
+    max-width: 320px;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+}
+
+/* Utility: keep image from being taller than viewport on very small screens */
+@media (max-height: 600px) {
+  .hero4-image {
+    max-height: 48vh;
+    object-fit: contain;
+  }
+}

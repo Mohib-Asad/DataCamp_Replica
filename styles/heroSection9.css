@@ -1,0 +1,247 @@
+/* heroSection9.css - responsive 3/2/1 carousel + avatars above cards (hs9-prefixed)
+   Adjusted so avatars aren't clipped and testimonies have more space.
+*/
+
+/* base reset inside component */
+.hs9-testimonials {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: #7b2cff;
+  color: #fff;
+}
+
+.hs9-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 20px; /* a little extra top padding for breathing room */
+  box-sizing: border-box;
+}
+
+/* title */
+.hs9-section-title {
+  text-align: center;
+  margin: 6px 0 34px 0;
+  color: white;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+/* wrapper */
+.hs9-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+  position: relative;
+  /* allow overflow from the viewport so avatars can sit above without being cut */
+  overflow: visible;
+}
+
+/* nav circles */
+.hs9-nav {
+  background: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #7b2cff;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+}
+.hs9-nav:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.2);
+}
+/* specific prev/next can be targeted if needed */
+.hs9-nav.hs9-nav-prev,
+.hs9-nav.hs9-nav-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  /* slight transparency so they don't overpower cards */
+  background: #ffffff;
+  opacity: 1;
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+/* place prev to the left, next to the right */
+.hs9-nav.hs9-nav-prev { left: -56px; }
+.hs9-nav.hs9-nav-next { right: -56px; }
+
+/* keyboard / focus visible outline for accessibility */
+.hs9-nav:focus-visible {
+  outline: 3px solid rgba(123,44,255,0.16);
+  outline-offset: 4px;
+  box-shadow: 0 10px 24px rgba(123,44,255,0.12);
+}
+
+/* disabled state (beginning / end of carousel) */
+.hs9-nav:disabled {
+  opacity: 0.42;
+  transform: none;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* hover lift only when not disabled */
+.hs9-nav:not(:disabled):hover {
+  transform: translateY(calc(-50% - 3px)); /* stays vertically centered + lift */
+}
+/* viewport
+   Allow overflow visible so avatars can extend above the top without clipping.
+   Add a top padding to give avatars vertical space in small viewports too.
+*/
+.hs9-carousel-viewport {
+  overflow: visible;
+  width: 100%;
+  max-width: calc(1200px - 120px); /* keep some room for nav buttons */
+  padding-top: 56px; /* room for avatars */
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* cards list (flex row) */
+.hs9-cards {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform .45s cubic-bezier(.2,.95,.25,1);
+  will-change: transform;
+  align-items: flex-start; /* keep cards top-aligned so avatars align consistently */
+}
+
+/* individual card
+   Increased top padding so text doesn't feel cramped under the avatar.
+   Relaxed widths to give more horizontal breathing room.
+*/
+.hs9-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 88px 22px 22px 22px; /* increased top padding for avatar gap */
+  position: relative;
+  box-shadow: 0 10px 30px rgba(4,10,20,0.12);
+  border: 1px solid rgba(0,0,0,0.03);
+  color: #0b2136;
+  flex: 0 0 360px;         /* default visible card width (JS still controls this) */
+  min-width: 280px;
+  max-width: 480px;
+  box-sizing: border-box;
+}
+
+/* colored top stripe */
+.hs9-card-top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8px;
+  top: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top: 8px solid #f7c744;
+}
+
+/* avatar
+   Slightly larger and moved a bit more above the card so it visually sits "on" the card.
+*/
+.hs9-avatar {
+  position: absolute;
+  top: -44px; /* pull avatar higher so it clearly overlaps */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  background: linear-gradient(180deg,#eee,#ddd);
+  font-size: 24px;
+  box-sizing: border-box;
+}
+
+/* initials */
+.hs9-avatar::after { content: attr(data-initials); }
+
+/* text
+   Slightly larger, increased line-height for readability
+*/
+.hs9-quote {
+  margin: 0 0 18px 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #0b2136;
+}
+.hs9-author {
+  margin: 0;
+  color: #6b7a86;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* dots */
+.hs9-carousel-controls {
+  text-align: center;
+  margin-top: 24px;
+}
+.hs9-dots {
+  display: inline-flex;
+  gap: 8px;
+}
+.hs9-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+.hs9-dot.active { background: wheat; }
+
+/* responsive */
+@media (max-width: 1400px) {
+  .hs9-nav.hs9-nav-prev { left: -64px; }
+  .hs9-nav.hs9-nav-next { right: -64px; }
+}
+
+@media (max-width: 1100px){
+  .hs9-carousel-viewport { max-width: calc(1200px - 80px); padding-top: 52px; }
+  .hs9-nav { width: 40px; height: 40px; font-size: 20px; }
+  .hs9-nav.hs9-nav-prev { left: -48px; }
+  .hs9-nav.hs9-nav-next { right: -48px; }
+  .hs9-card { padding: 80px 18px 18px 18px; flex: 0 0 320px; min-width: 260px; }
+  .hs9-avatar { width: 72px; height: 72px; top: -40px; font-size: 22px; }
+}
+
+@media (max-width: 760px){
+  .hs9-carousel-wrapper { gap: 12px; }
+  .hs9-carousel-viewport { max-width: 100%; padding-top: 48px; }
+  .hs9-nav { display: none; }
+  .hs9-card { padding: 76px 14px 16px 14px; flex: 0 0 280px; min-width: 220px; }
+  .hs9-avatar { width: 64px; height: 64px; top: -36px; font-size: 20px; }
+  .hs9-quote { font-size: 14px; }
+}
+
+@media (max-width: 520px){
+  .hs9-card { padding: 68px 12px 14px 12px; }
+  .hs9-avatar { width: 56px; height: 56px; top: -32px; font-size: 18px; }
+  .hs9-section-title { font-size: 18px; }
+  .hs9-quote { font-size: 14px; line-height: 1.45; }
+}
+
+/* optional: keep the cards visually separated when they overflow the viewport (nice on very wide screens) */
+@media (min-width: 1600px) {
+  .hs9-card { max-width: 520px; flex: 0 0 420px; }
+}

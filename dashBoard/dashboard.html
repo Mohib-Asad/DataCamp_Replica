@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataCamp Dashboard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles/dashboard.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="/images/DataCamp_idT7jV3n4Y_0.svg" class="datacamp-logo">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="/learnPage/learn.html">Learn</a></li>
+                        <li><a href="#">Certification</a></li>
+                        <li><a href="#">Workspace</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <button class="search-icon">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <button class="upgrade-btn">Upgrade</button>
+                
+                <div style="position: relative;">
+                    <button class="notification-btn" id="notificationBtn">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    
+                    <div class="dropdown-menu notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">Notifications</div>
+                        <div class="notification-item">
+                            <div class="notification-title">🚀 Master BI tools like Excel, Power BI, Tableau & Alteryx to make smarter decisions. Explore our popular resources today.</div>
+                            <div class="notification-time">12 hours ago</div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-title">Continue learning on mobile</div>
+                            <div class="notification-time">1 month ago</div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-title">Hasnain Muavia invited you to the group 'Hasnain Muavia 2025-2'</div>
+                            <div class="notification-time">1 month ago</div>
+                        </div>
+                        <a href="#" class="view-all-btn">View All Notifications</a>
+                    </div>
+                </div>
+                
+                <div style="position: relative;">
+                    <button class="profile-btn" id="profileBtn">M</button>
+                    
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            My Portfolio
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            Account Settings
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            Support
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-book"></i>
+                            My Library
+                        </a>
+                        <a href="#" class="dropdown-item" style="color: #7c3aed;">
+                            <i class="fas fa-rocket"></i>
+                            Upgrade
+                        </a>
+                        <a href="signin.html" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Log Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Welcome Section -->
+                <div class="welcome-section">
+                    <div class="progress-indicator">43/55 XP</div>
+                    <h1 class="welcome-title">Introduction to Python</h1>
+                    <p class="welcome-subtitle">Take the free Introduction to Python course to learn Python programming from scratch.</p>
+                    <button class="practice-btn">Continue Practising</button>
+                </div>
+
+                <!-- Cards Section -->
+                <div class="cards-row">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon orange">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3 class="card-title">Streaks 🔥</h3>
+                        </div>
+                        <div class="card-content">
+                            You have 300 unused credits to practice your skills!
+                        </div>
+                        <a href="#" class="view-link">Learn More</a>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon blue">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3 class="card-title">Portfolio 📊</h3>
+                        </div>
+                        <div class="card-content">
+                            Leverage AI using your experience and learn faster. Complete your matching strategy and find your tailor-made learning plan.
+                        </div>
+                        <a href="#" class="view-link">Tag & find</a>
+                    </div>
+                </div>
+
+                <!-- Certifications Section -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon purple">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="card-title">Certifications ⚡</h3>
+                    </div>
+                    <div class="card-content">
+                        You're missing out!<br>
+                        Validate your skills by earning certificates on trending technologies.
+                    </div>
+                    <div style="display: flex; gap: 12px; margin-top: 16px;">
+                        <button style="background: #1976d2; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-size: 12px;">🐍 Python for Data</button>
+                        <button style="background: #f5f5f5; color: #666; border: none; padding: 8px 16px; border-radius: 6px; font-size: 12px;">🧠 SQL Associate</button>
+                        <button style="background: #f5f5f5; color: #666; border: none; padding: 8px 16px; border-radius: 6px; font-size: 12px;">📊 Data Analyst Associate</button>
+                    </div>
+                </div>
+
+                <!-- Mobile App Section -->
+                <div class="mobile-app-card" style="margin-top: 20px; position: relative;">
+                    <button class="close-btn">×</button>
+                    <div class="qr-code">QR</div>
+                    <div class="mobile-content">
+                        <h3>Grow your data skills with DataCamp for Mobile</h3>
+                        <p>Keep progress on the go and continue courses and daily practice coding challenges.</p>
+                        <div class="app-buttons">
+                            <a href="#" class="app-btn">
+                                <i class="fab fa-apple"></i>
+                                App Store
+                            </a>
+                            <a href="#" class="app-btn">
+                                <i class="fab fa-google-play"></i>
+                                Google Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="sidebar-info">
+                    <h4>Hey, Mohib! 👋</h4>
+                    <p>500 XP</p>
+                    <div style="margin: 12px 0;">
+                        <div class="xp-badge">Leadership 1</div>
+                    </div>
+                    <p style="color: #1976d2; text-decoration: underline; cursor: pointer;">2:01:45:07:05 until</p>
+                </div>
+
+                <div class="sidebar-info">
+                    <h4>Can SSQA* to enter this week's XP League</h4>
+                    <div style="background: #f5f5f5; padding: 12px; border-radius: 8px; margin: 12px 0;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-trophy" style="color: #f57c00;"></i>
+                            <span style="font-size: 14px; font-weight: 600;">2 / 250 XP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-info">
+                    <h4>SQL Fundamentals</h4>
+                    <p>23 Hours</p>
+                    <a href="#" style="color: #1976d2; text-decoration: none; font-size: 14px;">View Details</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/script/dashboard.js"></script>
+</body>
+</html>

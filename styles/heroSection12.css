@@ -1,0 +1,172 @@
+/* heroSection12.css — purple background, black store buttons, FA icons with colors (updated selectors) */
+
+.hs12-switch-section {
+  background: #6568A0;
+  padding: 44px 20px;
+  position: relative;
+  color: #f7f8fb;
+  overflow: hidden;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+}
+
+/* subtle dark vignette decoration */
+.hs12-switch-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.08) 100%);
+  pointer-events: none;
+}
+
+/* Layout container */
+.hs12-switch-section .hs12-inner.hs12-container.hs12-switch-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  justify-content: center; /* centered instead of flex-start */
+  flex-wrap: wrap;
+}
+
+/* Left block */
+.hs12-switch-section .hs12-switch-left {
+  flex: 1 1 560px;
+  padding: 4px 6px;
+}
+
+/* Heading */
+.hs12-switch-heading {
+  margin: 0 0 10px;
+  font-size: 1.55rem;
+  line-height: 1.05;
+  color: #f7f8fb;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Accents */
+.hs12-accent-bluegreen { color: #2bbbad; }
+.hs12-accent-green { color: #02E45E; }
+
+/* description */
+.hs12-small {
+  margin: 10px 0;
+  color: rgba(247,248,251,0.85);
+  font-size: 0.95rem;
+  max-width: 48ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Store buttons container */
+.hs12-store-buttons {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center; /* center buttons */
+  flex-wrap: wrap;
+}
+
+/* Solid black pill-like store buttons */
+.hs12-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  min-height: 48px;
+  border-radius: 12px;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: transform .12s ease, box-shadow .18s ease, background .12s ease;
+}
+
+/* store icon sizing */
+.hs12-store-btn i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  line-height: 1;
+  flex: 0 0 28px;
+}
+
+/* Apple icon — white */
+.hs12-store-btn .fa-apple { color: #ffffff; }
+
+/* Google Play icon — gradient text */
+.hs12-store-btn .fa-google-play {
+  background: linear-gradient(45deg, #4285F4 0%, #34A853 36%, #FBBC05 68%, #EA4335 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* stacked store text */
+.hs12-store-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-align: left;
+  color: #fff;
+}
+.hs12-store-text small {
+  font-size: 0.66rem;
+  color: rgba(255,255,255,0.72);
+  font-weight: 500;
+}
+.hs12-store-text strong {
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Hover/focus */
+.hs12-store-btn:hover,
+.hs12-store-btn:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 46px rgba(0,0,0,0.32);
+  background: #111111;
+  outline: none;
+}
+
+/* Focus-visible (keyboard) */
+.hs12-store-btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(2,228,94,0.14), 0 18px 40px rgba(0,0,0,0.28);
+  border-color: rgba(2,228,94,0.2);
+  border-radius: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hs12-switch-section .hs12-inner.hs12-container.hs12-switch-inner {
+    display: block;
+    text-align: center;
+  }
+  .hs12-switch-section .hs12-switch-left { padding: 8px 0; }
+  .hs12-switch-section .hs12-store-buttons { justify-content: center; gap: 10px; }
+}
+
+/* small screens - full width buttons */
+@media (max-width: 420px) {
+  .hs12-switch-section { padding: 28px 12px; }
+  .hs12-switch-heading { font-size: 1.22rem; }
+  .hs12-store-btn {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 14px;
+  }
+  .hs12-store-text small { font-size: 0.7rem; }
+  .hs12-store-text strong { font-size: 0.95rem; }
+}

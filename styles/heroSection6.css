@@ -1,0 +1,233 @@
+/* Hero Section 6 — hs6- (updated: centered content, removed hover card lift) */
+
+/* ===== Variables (easy to tweak) ===== */
+:root{
+  --hs6-bg: #ffffff;
+  --hs6-text: #0f1720;
+  --hs6-muted: #4b5563;
+  --hs6-accent-pink1: #ff66b2;
+  --hs6-accent-pink2: #ff4c99;
+  --hs6-cta: #0b66ff;
+  --hs6-ring-start: #ff9ad4;
+  --hs6-ring-end: #ff66b2;
+  --hs6-profile-bg: #f8fafc;
+  --hs6-shadow: 0 10px 30px rgba(2,6,23,0.08);
+  --hs6-radius: 12px;
+  --hs6-avatar-size: 140px;
+  --hs6-min-height: 60vh;
+}
+
+/* Container: center everything vertically & horizontally */
+.hs6-section{
+  background: var(--hs6-bg);
+  color: var(--hs6-text);
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  padding: 56px 48px;
+  box-sizing: border-box;
+
+  /* Centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--hs6-min-height);
+}
+
+/* Headline centered */
+.hs6-headline{
+  font-size: 32px;
+  line-height: 1.05;
+  margin: 0 0 28px 0;
+  font-weight: 700;
+  color: var(--hs6-text);
+  max-width: 1100px;
+  text-align: center;
+}
+
+/* highlight spans */
+.hs6-highlight{
+  font-weight:800;
+  background:linear-gradient(90deg,var(--hs6-accent-pink1),var(--hs6-accent-pink2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color: transparent;
+}
+
+/* Profiles grid — centered columns */
+.hs6-profiles{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  align-items: start;
+  width: 100%;
+  margin-top: 8px;
+  max-width: 1200px;
+  box-sizing: border-box;
+
+  /* center the grid itself inside the section */
+  justify-items: center;
+}
+
+/* Each profile — not a "card" visually; content centered */
+.hs6-profile{
+  background: transparent;
+  border-radius: var(--hs6-radius);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;         /* center content inside each profile */
+  text-align: center;          /* center text */
+  gap: 12px;
+  transition: none;            /* removed hover lift/transition that made it feel like a card */
+  will-change: auto;
+  min-height: auto;
+}
+
+/* Removed hover/card lift — no transform or box-shadow on hover */
+/* (Previously: .hs6-profile:hover { transform: translateY(-6px); box-shadow: var(--hs6-shadow); } ) */
+
+/* Avatar wrap (creates gradient ring) */
+.hs6-avatar-wrap{
+  position: relative;
+  display: inline-block;
+  border-radius: 999px;
+  padding: 6px; /* ring thickness */
+  background: linear-gradient(135deg, var(--hs6-ring-start), var(--hs6-ring-end));
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Avatar figure (inner white background) */
+.hs6-avatar{
+  width: var(--hs6-avatar-size);
+  height: var(--hs6-avatar-size);
+  border-radius: 999px;
+  overflow: hidden;
+  display: block;
+  background: var(--hs6-profile-bg);
+  margin: 0;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+
+/* Avatar image itself */
+.hs6-avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Name */
+.hs6-name{
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 6px;
+  color: var(--hs6-text);
+}
+
+/* Company block (logo + name) */
+.hs6-company{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--hs6-muted);
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+/* company logo sizing */
+.hs6-logo{
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* company name text */
+.hs6-company-name{
+  text-transform: none;
+  font-weight: 600;
+  color: var(--hs6-muted);
+  font-size: 13px;
+}
+
+/* Course link / CTA; still interactive, with subtle motion for the arrow only */
+.hs6-course{
+  margin-top: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--hs6-cta);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* subtle underline on hover */
+.hs6-course:hover,
+.hs6-course:focus{
+  text-decoration: underline;
+  outline: none;
+  text-underline-offset: 4px;
+}
+
+/* arrow styling & gentle motion (keeps some interactivity without treating the whole item like a card) */
+.hs6-arrow{
+  display:inline-block;
+  transform: translateX(0);
+  transition: transform 180ms ease;
+}
+.hs6-profile:hover .hs6-arrow,
+.hs6-profile:focus-within .hs6-arrow{
+  transform: translateX(4px);
+}
+
+/* accessibility: focus-visible ring for keyboard users (keeps keyboard affordance) */
+.hs6-profile a:focus-visible,
+.hs6-profile button:focus-visible,
+.hs6-profile [tabindex]:focus-visible{
+  box-shadow: 0 0 0 4px rgba(11,102,255,0.12);
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Small screens tweak */
+@media (max-width: 900px){
+  :root{ --hs6-avatar-size: 140px; }
+  .hs6-section{ padding: 40px 22px; min-height: 50vh; }
+  .hs6-headline{ font-size: 28px; }
+  .hs6-profiles{ gap: 18px; }
+}
+
+/* Extra small screens: stack and smaller avatars */
+@media (max-width: 600px){
+  :root{ --hs6-avatar-size: 120px; }
+  .hs6-section{ padding: 28px 18px; min-height: auto; }
+  .hs6-headline{ font-size: 22px; }
+  .hs6-profiles{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hs6-profile{
+    padding: 14px;
+  }
+  .hs6-logo{ width: 28px; height: 28px; }
+}
+
+/* Make sure SVG logos scale nicely */
+.hs6-logo svg,
+.hs6-logo path,
+.hs6-logo rect,
+.hs6-logo text{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Wide layout padding */
+@media (min-width: 1300px){
+  .hs6-profile{
+    padding: 22px;
+  }
+}

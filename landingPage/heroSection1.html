@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Section - Header</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/heroSection1.css">
+</head>
+<body>
+  <main class="hero1-container">
+    <section class="hero1-content">
+      <h1 class="hero1-title">Learn data and AI skills</h1>
+      <p class="hero1-description">Master in-demand skills in Python, ChatGPT, Power BI, and more through interactive courses, real-world projects, and industry recognized certifications</p>
+      
+      <a href="#" class="hero1-cta hero1-cta-primary">Start Learning for Free</a>
+      <a href="#" class="hero1-cta hero1-cta-secondary">DataCamp for Business</a>
+       
+      <section class="hero1-tech-stack">
+        <div class="hero1-tech-icons">
+          <a href="#" class="hero1-tech-icon" aria-label="Python"><i class="fab fa-python"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="SQL"><i class="fas fa-database"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="ChatGPT"><i class="fas fa-robot"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Power BI"><i class="fas fa-chart-line"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Tableau"><i class="fas fa-table"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Excel"><i class="fas fa-file-excel"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Docker"><i class="fab fa-docker"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Databricks"><i class="fas fa-fire"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Snowflake"><i class="fas fa-snowflake"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="More"><i class="fas fa-ellipsis-h"></i></a>
+        </div>
+      </section>
+    </section>
+
+    <section class="hero1-signup">
+      <h2 class="hero1-signup-title">Create Your Free Account</h2>
+      
+      <div class="hero1-social-auth">
+        <div class="hero1-social-icons">
+          <span class="hero1-social-icon"><i class="fab fa-google"></i></span>
+          <span class="hero1-social-icon"><i class="fab fa-facebook-f"></i></span>
+          <span class="hero1-social-icon"><i class="fab fa-linkedin-in"></i></span>
+          <span class="hero1-social-icon"><i class="fab fa-apple"></i></span>
+        </div>
+        <div class="hero1-social-divider">or</div>
+      </div>
+
+      <form id="hero1SignupForm" class="hero1-form" novalidate action="#" method="POST">
+        <div class="hero1-form-group">
+          <label for="hero1Email" class="hero1-form-label">Email Address</label>
+          <input type="email" id="hero1Email" class="hero1-form-input" placeholder="Email Address" required>
+        </div>
+        
+        <div class="hero1-form-group">
+          <label for="hero1Password" class="hero1-form-label">Password</label>
+          <input type="password" id="hero1Password" class="hero1-form-input" placeholder="Password" required minlength="6">
+        </div>
+        
+        <button type="submit" id="hero1SubmitBtn" class="hero1-submit-btn">Start Learning for Free</button>
+      </form>
+
+      <div class="hero1-legal">
+        <p>By continuing your access you agree to our <strong>Terms of Use</strong>, our <strong>Privacy Policy</strong> and that your data is stored in the USA.</p>
+      </div>
+    </section>
+  </main>
+  
+  <script src="script/heroSection1.js" defer></script>
+</body>
+</html>

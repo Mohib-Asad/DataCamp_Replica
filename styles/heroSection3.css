@@ -1,0 +1,245 @@
+/* styles/heroSection3.css */
+
+/* Theme variables */
+:root{
+  --hero3-heading-color: #2c3e50;
+  --hero3-accent: #bd8943;
+  --hero3-accent-hover: #9b0892;
+  --hero3-chip-bg: #05e3c2;
+  --hero3-chip-text: #5f5f5f;
+  --hero3-card-border-bottom: green;
+  --hero3-card-border-hover: orange;
+  --hero3-muted: #7f8c8d;
+  --hero3-body-max: 1200px;
+}
+
+/* Heading */
+.hero3-heading {
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: var(--hero3-heading-color);
+  text-align: center;
+}
+
+/* Header wrapper */
+.hero3-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Filters */
+.hero3-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Filter buttons */
+.hero3-filter-btn {
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  align-items: center;
+  font-weight: 600;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  gap: .5rem;
+  user-select: none;
+}
+
+.hero3-filter-btn:hover {
+  background-color: #0f0f0f;
+  color: #ddad54;
+}
+
+/* Active filter state */
+.hero3-filter-btn.hero3-filter-active {
+  background-color: var(--hero3-chip-bg);
+  color: var(--hero3-chip-text);
+  border-color: #2c3e50;
+}
+
+/* Explore button (on the right) */
+.hero3-explore-btn {
+  padding: 8px 16px;
+  background-color: var(--hero3-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  margin-left: 8px; 
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.hero3-explore-btn:hover {
+  background-color: var(--hero3-accent-hover);
+}
+
+/* Courses grid — fallback grid for non-bootstrap layout */
+.hero3-courses-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-left: -12px !important;   /* gutter compensation */
+  margin-right: -12px !important;
+  gap: 0 !important;               /* we use padding on cols below */
+  box-sizing: border-box !important;
+  max-width: var(--hero3-body-max);
+  justify-content: center;
+  width: 100%;
+  padding: 0 8px;
+}
+
+/* Course card */
+.hero3-course-card {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  border-bottom: 5px solid var(--hero3-card-border-bottom);
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+}
+
+.hero3-course-card:hover {
+  transform: translateY(-6px);
+  border-bottom: 5px solid var(--hero3-card-border-hover);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.12);
+}
+
+/* Course content */
+.hero3-course-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.hero3-course-title {
+  font-size: 1.06rem;
+  margin-bottom: 6px;
+  color: var(--hero3-heading-color);
+}
+
+/* Meta row */
+.hero3-course-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: var(--hero3-muted);
+  align-items: center;
+}
+
+.hero3-course-level {
+  font-weight: 600;
+}
+
+.hero3-course-duration::before {
+  content: "•";
+  margin-right: 6px;
+}
+
+/* Learners text */
+.hero3-course-learners {
+  font-size: 0.82rem;
+  color: var(--hero3-muted);
+  margin-bottom: 10px;
+}
+
+/* Description */
+.hero3-course-desc {
+  margin-bottom: 12px;
+  line-height: 1.45;
+  color: #555;
+  flex: 1 0 auto;
+}
+
+/* Course details link */
+.hero3-course-link {
+  display: inline-block;
+  color: var(--hero3-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.18s ease;
+  margin-top: 8px;
+}
+
+.hero3-course-link:hover {
+  color: var(--hero3-accent-hover);
+  text-decoration: underline;
+}
+
+.hero3-course-link::after {
+  content: " →";
+}
+
+/* Hidden utility (used by JS) */
+.hero3-hidden {
+  display: none !important;
+}
+
+/* Show more wrapper and button */
+.hero3-show-more-wrap {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.hero3-show-more-btn {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero3-filters { gap: 10px; }  
+  .hero3-courses-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  :root { --hero3-body-max: 1200px; } /* ensures enough width for 3 columns */
+  .hero3-courses-grid { padding: 0 12px; }
+}
+
+@media (max-width: 768px) {
+  .hero3-courses-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero3-filters { 
+    flex-direction: column; 
+    align-items: stretch; 
+    gap: 8px; 
+  }
+  .hero3-explore-btn { 
+    margin-left: 0; 
+    align-self: flex-start; 
+  }
+}
+
+/* Small screens - tighten spacing */
+@media (max-width: 480px) {
+  .hero3-heading { font-size: 28px; }
+  .hero3-course-title { font-size: 1rem; }
+  .hero3-course-desc { font-size: 0.95rem; }
+  .hero3-filter-btn, .hero3-explore-btn { padding: 7px 12px; font-size: 0.95rem; }
+}

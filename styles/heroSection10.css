@@ -1,0 +1,141 @@
+/* heroSection10.css - styles for heroSection 10 (teacher promo) */
+
+/* Section layout */
+.hs10-teacher-promo {
+  padding: 44px 20px;
+  background: linear-gradient(180deg, #fbfbfe 0%, #f6f7fa 100%);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #fafbfc;
+  color: #0f1724;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center; /* center everything by default */
+}
+
+.hs10-teacher-promo * {
+  box-sizing: border-box;
+}
+
+/* Grid container centered */
+.hs10-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+  justify-content: center; /* center align horizontally */
+  text-align: center;      /* center inner text */
+}
+
+/* Left column (heading + CTA) */
+.hs10-promo-left { padding-right: 16px; }
+.hs10-promo-title {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f1724;
+}
+.hs10-promo-desc {
+  margin: 0 0 18px 0;
+  color: #657080;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto; /* center limit width */
+}
+
+/* CTA - outlined button */
+.hs10-btn-outline,
+.hs10-cta.hs10-btn-outline {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1.5px solid #6b46c1;
+  color: #6b46c1;
+  text-decoration: none;
+  font-weight: 600;
+  background: white;
+  transition: background .18s ease, transform .08s ease, color .18s ease, box-shadow .12s;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+}
+.hs10-btn-outline:hover,
+.hs10-btn-outline:focus,
+.hs10-cta.hs10-btn-outline:hover,
+.hs10-cta.hs10-btn-outline:focus {
+  background: #6b46c1;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107,70,193,0.12);
+  outline: none;
+}
+.hs10-btn-outline:focus-visible,
+.hs10-cta.hs10-btn-outline:focus-visible {
+  box-shadow: 0 0 0 4px rgba(124,58,237,0.14);
+}
+
+/* Right column - image + metrics */
+.hs10-promo-right {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center; /* center horizontally */
+}
+
+/* Decorative image (if used) */
+.hs10-promo-image {
+  width: 160px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 160px;
+  border-radius: 8px;
+  background: linear-gradient(180deg,#ffffff,#f7f8fb);
+  box-shadow: 0 6px 22px rgba(20,24,40,0.04);
+}
+
+/* Metrics grid */
+.hs10-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 14px 28px;
+  min-width: 240px;
+  justify-items: center;  /* center items */
+  align-items: start;
+  margin: 0 auto;
+}
+.hs10-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 220px;
+  align-items: center; /* center per metric */
+}
+.hs10-num {
+  font-size: 36px;
+  font-weight: 800;
+  color: #7c3aed;
+  line-height: 1;
+}
+.hs10-label {
+  font-size: 13px;
+  color: #657080;
+}
+
+/* Responsiveness */
+@media (max-width:900px){
+  .hs10-container { grid-template-columns: 1fr; gap:18px; text-align: center; }
+  .hs10-promo-right { justify-content: center; flex-wrap: wrap; }
+  .hs10-promo-image { margin-bottom:6px; flex:0 0 120px; width:120px; height:82px; }
+  .hs10-metrics { grid-template-columns: repeat(2, 1fr); justify-items: center; }
+}
+
+@media (max-width:420px){
+  .hs10-promo-title { font-size:22px; }
+  .hs10-container { padding:0; }
+  .hs10-metrics { grid-template-columns: 1fr; }
+  .hs10-promo-left { order:1; }
+  .hs10-promo-right { order:2; flex-direction:column; align-items:center; gap:12px; }
+}

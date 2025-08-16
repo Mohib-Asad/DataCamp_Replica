@@ -1,0 +1,280 @@
+/* ---------- HS7: Hero Section 7 Styles ---------- */
+
+/* container */
+.hs7-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 22px;
+  box-sizing: border-box;
+  min-height: 35vh;
+}
+
+/* ================= HS7 HERO (top) ================= */
+/* Parent section */
+.hs7-hero {
+  background: #05192d;
+  padding: clamp(32px, 6vw, 64px) 0;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Inner row wrapper */
+.hs7-hero .hs7-inner {
+  display: flex;
+  flex: 0 1 auto;                 /* don't force wrapper to full-basis */
+  gap: clamp(18px, 3.5vw, 40px);
+  align-items: flex-start;        /* top-align columns so image can sit at start */
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* Allow columns to shrink below intrinsic content width */
+.hs7-hero-left, .hs7-hero-right { min-width: 0; box-sizing: border-box; }
+
+/* LEFT (image column) - side-by-side on desktop */
+.hs7-hero-left {
+  flex: 0 1 55%;              /* base ~55% of row, can shrink */
+  min-width: 200px;          /* can shrink down to 200px */
+  max-width: 800px;
+  display: flex;
+  justify-content: center;   /* center image horizontally inside column */
+  align-items: flex-start;   /* keep image at top within the column */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Image container that preserves aspect ratio and scales */
+.hs7-hint-figure {
+  align-self: flex-start;     /* sit at the top of the row */
+  width: 100%;
+  max-width: 550px;           /* upper bound for the image */
+  aspect-ratio: 550 / 320;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  box-sizing: border-box;
+}
+.hs7-hint-figure img {
+  width: 100%;
+  height: auto;               /* DO NOT force full height — lets it scale naturally */
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT (text column) */
+.hs7-hero-right {
+  flex: 1 1 40%;              /* take remaining space but allowed to shrink */
+  min-width: 200px;          /* allow down to 200px as requested */
+  max-width: 520px;          /* upper bound for wide screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertically center text inside column */
+  align-items: flex-start;   /* left-aligned on wide screens */
+  align-self: center;        /* center this column vertically in the row */
+  gap: 10px;
+  padding: 6px 12px;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* text inside */
+.hs7-hero-right h1 { margin:0 0 6px 0; font-weight:700; font-size:28px; line-height:1.05; color:#eaf2f7; letter-spacing:-0.2px; }
+.hs7-hero-right .hs7-muted { color:#eaf2f7; opacity:.95; font-weight:500; }
+.hs7-hero-right h2 { margin:0 0 8px 0; font-size:20px; color:#eaf2f7; }
+.hs7-hero-right .hs7-lead { margin:0 0 18px 0; color:#9fb0bd; font-size:14px; line-height:1.4; max-width:100%; }
+
+/* CTA */
+.hs7-btn--outline,
+.hs7-btn { 
+  display:inline-block; 
+  background:white; 
+  color:#7A35FE; 
+  border:1px solid rgba(255,255,255,0.95); 
+  padding:10px 16px; 
+  border-radius:6px; 
+  cursor:pointer; 
+  font-weight:600; 
+  transition:all .18s ease; 
+  font-family: inherit;
+  text-align: center;
+}
+.hs7-btn--outline:hover, .hs7-btn--outline:focus,
+.hs7-btn:hover, .hs7-btn:focus { 
+  background:#7A35FE; 
+  color:white; 
+  border: none;
+  transform:translateY(-2px); 
+  box-shadow:0 6px 18px rgba(0,0,0,0.35); 
+  outline: none;
+}
+
+/* ================= HS7 SWITCH (lower) ================= */
+.hs7-switch { 
+  background:#13253a; 
+  padding: clamp(28px, 5.5vw, 50px) 0;
+  border-top:1px solid rgba(255,255,255,0.02); 
+  box-sizing:border-box; 
+}
+
+/* switch inner wrapper */
+.hs7-switch-inner {
+  display:flex;
+  gap: clamp(16px, 3.5vw, 40px);
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  min-width: 0;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 12px;
+  box-sizing:border-box;
+}
+
+/* left text */
+.hs7-switch-left { flex: 1 1 clamp(300px, 48%, 720px); min-width: 240px; max-width:720px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; color:#eaf2f7; }
+.hs7-switch-left h3 { margin:0 0 10px 0; font-size:clamp(18px,1.7vw,22px); line-height:1.05; }
+.hs7-switch-left .hs7-small { margin:6px 0; color:#9fb0bd; font-size:clamp(13px,1.1vw,14px); max-width:520px; }
+
+/* store badges */
+.hs7-store-buttons { 
+  margin-top:18px; 
+  display:flex; 
+  gap:12px; 
+  align-items:center; 
+  flex-wrap:wrap; 
+}
+.hs7-store-btn { 
+  display:inline-flex;
+  align-items:center;
+  gap:12px; 
+  background:black;
+  border-radius:10px; 
+  padding:10px 14px; 
+  color:#eaf2f7; 
+  border:1px solid rgba(255,255,255,0.04); 
+  min-width:150px; 
+  box-sizing:border-box; 
+  transition: transform .14s ease, background .14s ease, box-shadow .14s ease; text-decoration: none; 
+}
+.hs7-store-btn i { 
+  font-size: clamp(18px,2.4vw,22px); 
+  width:28px; 
+  text-align:center; 
+  color: inherit; 
+}
+
+.hs7-store-btn:hover {
+  color: gold;
+  background-color: teal;
+}
+
+/* devices preview — make it behave like hero columns (shrinkable, min 200px) */
+.hs7-devices {
+  flex: 0 1 40%;             /* ~40% of the switch row on wide screens */
+  min-width: 0;         /* can get down to 200px */
+  max-width: 600px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-left:0;
+  box-sizing:border-box;
+}
+.hs7-devices img {
+  width:100%;
+  height:auto;
+  max-width:100%;
+  display:block;
+  object-fit:contain;
+  aspect-ratio:600/230;
+  margin:0 auto;
+}
+
+/* ============== RESPONSIVE BREAKPOINT ============== */
+/* Side-by-side for widths > 700px. Stack for <= 700px (left on top, right below). */
+@media (max-width: 700px) {
+  /* Hero: stack vertically */
+  .hs7-hero .hs7-inner {
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    gap: clamp(14px, 4vw, 28px);
+    justify-content: center;
+  }
+
+  .hs7-hero-left, .hs7-hero-right {
+    flex: 1;
+    width: 100%;
+    max-width: 700px;   /* keep reasonable max */
+    min-width: 0;       /* ensure shrink */
+  }
+
+  .hs7-hint-figure {
+    align-self: center;
+    max-width: 88%;
+    aspect-ratio: 550/320;
+  }
+
+  .hs7-hint-figure img { height: auto; max-width: 100%; display:block; }
+
+  .hs7-hero-right {
+    align-items: center;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  /* Switch/devices: stacked, but preview gets visually larger (within limits) */
+  .hs7-switch-inner { 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+  }
+  .hs7-switch-left { 
+    max-width: 92%;
+    width: 100%;
+    min-width: 0;
+    align-items: center; 
+    text-align:center;  
+  }
+  .hs7-devices { 
+    flex: 1 1 100%; 
+    max-width: 92%;
+    width: 100%; 
+    min-width: 0; 
+    margin-left: 0; 
+  }
+  .hs7-devices img { 
+    width: 90%; 
+    max-width: 760px; 
+    height: auto; 
+  }
+}
+
+/* very small screens adjustments */
+@media (max-width: 420px) {
+  .hs7-hint-figure { max-width: 96%; }
+  .hs7-hint-figure img { max-height: 420px; }
+  .hs7-devices img { max-width: 440px; width: 100%; }
+  .hs7-hero-right h1 { font-size: 20px; }
+  .hs7-hero-right h2 { font-size: 16px; }
+  .hs7-hero-right .hs7-lead { font-size: 14px; }
+}
+
+/* ensure icons and inline store text keep layout */
+.hs7-store-text { display: inline-flex; flex-direction: column; text-align: left; line-height: 1; }
+.hs7-store-text small { font-size: 11px; opacity: .9; display: block; }
+.hs7-store-text strong { font-size: 14px; display: block; }
+
+/* preserve existing visual details on very wide layouts */
+@media (min-width: 1300px) {
+  .hs7-container { padding-left: 22px; padding-right: 22px; }
+  .hs7-hero-right { max-width: 520px; }
+}

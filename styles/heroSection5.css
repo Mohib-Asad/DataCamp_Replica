@@ -1,0 +1,157 @@
+/* === Hero Section 5 (hs5-) === */
+.hs5-hero-section{
+  background:#122433;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  color:#e6eef6;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  max-width:1000vh;
+  margin: auto;
+  padding:80px; /* same as body to look seamless */
+}
+
+.hs5-hero-section__title{
+  font-size:44px;
+  margin:8px 0 28px;
+  color:#ffffff;
+  font-weight:700;
+  padding: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* ===== Grid (no extra wrapper layer) ===== */
+.hs5-hero-section .hs5-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: space-evenly;
+  gap: 2rem;
+  align-items:start;
+  perspective:100vh;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Card ===== */
+.hs5-hero-section .hs5-card{
+  background:#fff;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #222;
+  transform-origin: center top;
+  transform: translateY(-6px) scale(1);
+  transition: transform 280ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms ease, border-color 220ms ease;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+  display:flex;
+  flex-direction:column;
+  height: 100%;
+  justify-content: space-evenly;
+  position:relative;
+  min-width: 0;
+  background-clip:padding-box;
+  border: 1px solid transparent;
+}
+
+/* Accent borders (simple solid fallbacks) */
+.hs5-card.hs5-card--purple { border-color: #6d43b8; }
+.hs5-card.hs5-card--green  { border-color: #00a86b; }
+.hs5-card.hs5-card--yellow { border-color: #f2c400; }
+
+/* ===== Hero image area ===== */
+.hs5-card__media{
+  aspect-ratio: 16 / 9;
+  height: 320px;
+  object-fit: cover;
+  width: 100%;
+  position:relative;
+  display:block;
+  overflow:hidden;
+}
+.hs5-card__media img,
+.hs5-card__image{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+
+/* Badge */
+.hs5-card__badge{
+  position:absolute;
+  left:20px;
+  top:20px;
+  width:64px; height:64px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700;
+  z-index:5;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.12);
+}
+
+/* per-card badge colors */
+.hs5-card.hs5-card--purple .hs5-card__badge{ background: linear-gradient(180deg,#8c5bff,#7132ff); color:#fff; }
+.hs5-card.hs5-card--green  .hs5-card__badge{ background: linear-gradient(180deg,#00d17a,#00b56a); color:#fff; }
+.hs5-card.hs5-card--yellow .hs5-card__badge{ background: linear-gradient(180deg,#ffd24a,#ffc400); color:#1e1e1e; }
+
+/* Tag */
+.hs5-card__tag{
+  position:absolute;
+  left:18px;
+  bottom:18px;
+  padding:8px 12px;
+  border-radius:4px;
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:0.6px;
+  z-index:5;
+}
+/* per-card tag colors */
+.hs5-card.hs5-card--purple .hs5-card__tag{ background:#6c2df0; color:#fff; }
+.hs5-card.hs5-card--green  .hs5-card__tag{ background:#00d17a; color:#fff; }
+.hs5-card.hs5-card--yellow .hs5-card__tag{ background:#f4c400; color:#1e1e1e; }
+
+/* ===== Body content ===== */
+.hs5-card__content{
+  padding:18px 22px 28px;
+  display:flex; flex-direction:column; justify-content:space-between; flex:1;
+}
+.hs5-card__content h3,
+.hs5-card__text h3{ font-size:18px; color:#14202b; margin-bottom:6px; }
+.hs5-card__content p,
+.hs5-card__text p{ color:#3b4b57; line-height:1.6; margin:12px 0 18px; font-size:15px; }
+.hs5-card__learn{
+  color:#1565d8;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* ===== Hover behavior ===== */
+.hs5-card:hover{
+  transform: translateY(8px) scale(1.032);
+  box-shadow: 0 30px 50px rgba(2,6,23,0.45);
+  z-index: 50;
+}
+.hs5-card.hs5-card--center{ transform: translateY(-10px) scale(1.01); }
+.hs5-card.hs5-card--center:hover{ transform: translateY(12px) scale(1.06); }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .hs5-hero-section .hs5-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hs5-hero-section .hs5-grid {
+    gap: 1rem;
+  }
+  .hs5-hero-section .hs5-card {
+    border-radius: 10px;
+  }
+}
