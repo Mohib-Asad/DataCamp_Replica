@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataCamp - Create Account</title>
+
+  <!-- Bootstrap + Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/signup.css">
+</head>
+<body>
+  <!-- Background decorative circles -->
+  <div class="bg-circle circle-1"></div>
+  <div class="bg-circle circle-2"></div>
+  <div class="bg-circle circle-3"></div>
+  <div class="bg-circle circle-4"></div>
+  <div class="bg-circle circle-5"></div>
+
+  <div class="main-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/DataCamp_White.svg" alt="DataCamp Logo">
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-container">
+      <h1 class="form-title">Create your free account to grow your data and AI skills</h1>
+      
+      <form id="registrationForm" novalidate>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail address</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <div class="password-container">
+            <input type="password" class="form-control" id="password" name="password" required>
+            <button type="button" class="password-toggle" onclick="togglePassword()">
+              <i class="fas fa-eye" id="passwordIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Get Started</button>
+      </form>
+
+      <div class="social-divider">Or register using:</div>
+
+      <div class="social-buttons">
+        <a href="#" class="social-btn google" onclick="return false;">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" class="social-btn linkedin" onclick="return false;">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="social-btn facebook" onclick="return false;">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-btn apple" onclick="return false;">
+          <i class="fab fa-apple"></i>
+        </a>
+      </div>
+
+      <p class="terms-text">
+        By continuing, you accept our 
+        <a href="#" onclick="return false;">Terms of Use</a>, 
+        <a href="#" onclick="return false;">Privacy Policy</a> 
+        and confirm you are at least 16 years old.
+      </p>
+    </div>
+
+    <!-- Sign In Link -->
+    <div class="sign-in-container">
+      <p class="sign-in-text">
+        Already have an account? <a href="signin.html">Sign in.</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="script/signup.js"></script>
+</body>
+</html>

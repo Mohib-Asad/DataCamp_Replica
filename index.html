@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataCamp Landing Page</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+
+  <nav class="dc-navbar navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand dc-center-nav" href="#"><img src="images/DataCamp_White.svg" alt="Logo" width="170"></a>
+
+      <div class="dc-center-nav d-none d-lg-flex">   
+        <ul class="navbar-nav">
+          <!-- Catalog Dropdown (wide mega) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Catalog
+            </a>
+
+            <!-- Add class cols-3 or cols-2 to control columns -->
+            <div class="dropdown-menu dc-dropdown-mega dc-catalog-mega cols-3" aria-labelledby="catalogDropdown">
+              <!-- interior wrapper -->
+              <div class="mega-body">
+                <div class="mega-grid">
+                  <!-- Column 1 -->
+                  <div class="mega-col">
+                    <h5 class="dc-section-title-1"><i class="bi bi-book me-2"></i>Learn</h5>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-icon"><i class="bi bi-journal-text"></i></span>
+                      <span class="item-body"><span class="item-title">Courses</span>
+                      <span class="item-desc">Structured learning paths</span></span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-icon"><i class="bi bi-briefcase"></i></span>
+                      <span class="item-body"><span class="item-title">Career & Skill Tracks</span><span class="item-desc">Long-term learning plans</span></span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-icon"><i class="bi bi-code"></i></span>
+                      <span class="item-body"><span class="item-title">Technologies</span><span class="item-desc">Filter by tech & libraries</span></span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-icon"><i class="bi bi-star"></i></span>
+                      <span class="item-body"><span class="item-title">Popular Topics</span><span class="item-desc">Trending topics</span></span>
+                    </a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="mega-col">
+                    <h5 class="dc-section-title-2"><i class="bi bi-gear me-2"></i>Apply</h5>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-icon"><i class="bi bi-laptop"></i></span>
+                      <span class="item-body"><span class="item-title">Real-World Projects</span><span class="item-desc">Hands-on practice</span></span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-icon"><i class="bi bi-people"></i></span>
+                      <span class="item-body"><span class="item-title">Code-Alongs</span><span class="item-desc">Learn alongside experts</span></span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-icon"><i class="bi bi-trophy"></i></span>
+                      <span class="item-body"><span class="item-title">Competitions</span><span class="item-desc">Test your skills</span></span>
+                    </a>
+                  </div>
+
+                  <!-- Column 3 -->
+                  <div class="mega-col">
+                    <h5 class="dc-section-title-3"><i class="bi bi-briefcase me-2"></i>Get Hired</h5>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-icon"><i class="bi bi-patch-check"></i></span>
+                      <span class="item-body"><span class="item-title">Certification</span><span class="item-desc">Validate your skills</span></span>
+                    </a>
+
+                    <hr>
+
+                    <h6 class="small">Code with an expert</h6>
+                    <p class="small text-muted">Code along with an expert solving real problems in DataLab.</p>
+                    <ul class="list-unstyled small">
+                      <li><input type="checkbox" checked> Building AI Applications</li>
+                      <li><input type="checkbox" checked> Getting Started with OpenAI</li>
+                      <li><input type="checkbox" checked> SQL for Beginners</li>
+                    </ul>
+                    <div class="text-center mt-2">
+                      <a href="#" class="btn btn-sm btn-primary">Check out more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Resources Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+            <div class="dropdown-menu dc-dropdown-mega dc-resources-mega cols-3" aria-labelledby="resourcesDropdown">
+              <div class="mega-body">
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <h5>Upcoming Webinars</h5>
+                    <a class="dropdown-item" href="#">Creating a Podcast Generation AI</a>
+                    <a class="dropdown-item" href="#">Build a Personalized Referral Pipeline</a>
+                    <a class="dropdown-item" href="#">The State of Data & Multimodal AI</a>
+                    <a class="dropdown-item" href="#">Building Scalable Data Pipelines</a>
+                  </div>
+                  <div class="mega-col">
+                    <h5>More Webinars</h5>
+                    <a class="dropdown-item" href="#">AI Governance</a>
+                    <a class="dropdown-item" href="#">Creating AI Agents on AWS</a>
+                    <a class="dropdown-item" href="#">Scaling Computer Vision AI</a>
+                    <a class="dropdown-item" href="#">AI Agents with n8n</a>
+                  </div>
+                  <div class="mega-col">
+                    <h5>Resources</h5>
+                    <a class="dropdown-item" href="#">Past Webinars</a>
+                    <a class="dropdown-item" href="#">Code Alongs</a>
+                    <a class="dropdown-item" href="#">Blog</a>
+                    <a class="dropdown-item" href="#">Cheat Sheets</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item"><a class="dc-nav-simple nav-link" href="/pricing.html">Pricings</a></li> 
+          <li class="nav-item"><a class="dc-nav-simple nav-link" href="#">For Business</a></li>
+          <li class="nav-item"><a class="dc-nav-simple nav-link" href="#">For Universities</a></li>
+        </ul>
+      </div>
+
+      <div class="dc-right-group d-flex align-items-center">
+        <button id="navSearchToggle" class="btn"><i class="bi bi-search fs-4"></i></button>
+
+        <div class="dropdown ms-2">
+          <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe fs-4"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Spanish</a></li>
+            <li><a class="dropdown-item" href="#">French</a></li>
+            <li><a class="dropdown-item" href="#">German</a></li>
+          </ul>
+        </div>
+
+        <!-- Desktop sign-in/signup buttons -->
+        <div class="dc-signin ms-2 d-none d-lg-block">
+          <a href="signin.html" class="dc-signin-btn">Log In</a>
+        </div>
+        <div class="dc-signup ms-2 d-none d-lg-block">
+          <a href="signup.html" class="dc-signup-btn">Get Started</a>
+        </div>
+
+        <!-- Menu toggler -->
+        <button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search box below navbar -->
+  <div class="dc-search-box" id="navSearchBox">
+    <input id="navSearchInput" type="search" placeholder="Search...">
+  </div>
+
+  <!-- Offcanvas sidebar menu -->
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="mb-4">
+        <h5 class="dc-section-title-1"><i class="bi bi-book"></i> Learn</h5>
+        <ul class="list-unstyled ps-3">
+          <li>Courses</li>
+          <li>Career & Skill Tracks</li>
+          <li>Technologies</li>
+          <li>Popular Topics</li>
+        </ul>
+      </div>
+      <div class="mb-4">
+        <h5 class="dc-section-title-2"><i class="bi bi-gear"></i> Apply</h5>
+        <ul class="list-unstyled ps-3">
+          <li>Real-World Projects</li>
+          <li>Code-Alongs</li>
+          <li>Competitions</li>
+        </ul>
+      </div>
+      <div class="mb-4">
+        <h5 class="dc-section-title-3"><i class="bi bi-briefcase"></i> Get Hired</h5>
+        <ul class="list-unstyled ps-3">
+          <li>Certification</li>
+          <li>Resources</li>
+        </ul>
+      </div>
+
+      <!-- Mobile sign-in/signup buttons -->
+      <div class="d-lg-none">
+        <div class="dc-signin w-100 mb-2">
+          <a href="signin.html" class="dc-signin-btn w-100">Log In</a>
+        </div>
+        <div class="dc-signup w-100">
+          <a href="signup.html" class="dc-signup-btn w-100">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main role="main" class="hero1-container">
+    <section class="hero1-content">
+      <h1 class="hero1-title">Learn data and AI skills</h1>
+      <p class="hero1-description">Master in-demand skills in Python, ChatGPT, Power BI, and more through interactive courses, real-world projects, and industry recognized certifications</p>
+      
+      <a href="#" class="hero1-cta hero1-cta-primary">Start Learning for Free</a>
+      <a href="#" class="hero1-cta hero1-cta-secondary">DataCamp for Business</a>
+       
+      <section class="hero1-tech-stack">
+        <div class="hero1-tech-icons">
+          <a href="#" class="hero1-tech-icon" aria-label="Python"><i class="fab fa-python"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="SQL"><i class="fas fa-database"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="ChatGPT"><i class="fas fa-robot"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Power BI"><i class="fas fa-chart-line"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Tableau"><i class="fas fa-table"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Excel"><i class="fas fa-file-excel"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Docker"><i class="fab fa-docker"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Databricks"><i class="fas fa-fire"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="Snowflake"><i class="fas fa-snowflake"></i></a>
+          <a href="#" class="hero1-tech-icon" aria-label="More"><i class="fas fa-ellipsis-h"></i></a>
+        </div>
+      </section>
+    </section>
+
+    <section class="hero1-signup">
+      <h2 class="hero1-signup-title">Create Your Free Account</h2>
+      
+      <div class="hero1-social-auth">
+        <div class="hero1-social-icons">
+          <span class="hero1-social-icon"><i class="fab fa-google"></i></span>
+          <span class="hero1-social-icon"><i class="fab fa-facebook-f"></i></span>
+          <span class="hero1-social-icon"><i class="fab fa-linkedin-in"></i></span>
+          <span class="hero1-social-icon"><i class="fab fa-apple"></i></span>
+        </div>
+        <div class="hero1-social-divider">or</div>
+      </div>
+
+      <form id="hero1SignupForm" class="hero1-form" novalidate action="#" method="POST">
+        <div class="hero1-form-group">
+          <label for="hero1Email" class="hero1-form-label">Email Address</label>
+          <input type="email" id="hero1Email" class="hero1-form-input" placeholder="Email Address" required>
+        </div>
+        
+        <div class="hero1-form-group">
+          <label for="hero1Password" class="hero1-form-label">Password</label>
+          <input type="password" id="hero1Password" class="hero1-form-input" placeholder="Password" required minlength="6">
+        </div>
+        
+        <button type="submit" id="hero1SubmitBtn" class="hero1-submit-btn">Start Learning for Free</button>
+      </form>
+
+      <div class="hero1-legal">
+        <p>By continuing your access you agree to our <strong>Terms of Use</strong>, our <strong>Privacy Policy</strong> and that your data is stored in the USA.</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="hero2-section">
+    <div class="hero2-header">
+        <div class="hero2-subtitle">Why DataCamp for Business?</div>
+        <h2 class="hero2-heading">Tailored data and AI upskilling for your business</h2>
+        <p class="hero2-description">Don't fall behind. Join 80% of the Fortune 1000 who partner with us by building a data and AI learning program that fits your organization's needs.</p>
+        <div class="hero2-cta-wrap">
+            <a href="#" class="hero2-cta hero2-cta-primary">DataCamp for Business</a>
+            <a href="#" class="hero2-cta hero2-cta-secondary">Request Demo</a>
+        </div>
+    </div>
+
+    <div class="hero2-companies">
+        <img src="images/image2.png" alt="Logos of partner companies" class="hero2-companies-img">
+    </div>
+
+    <div class="hero2-industries">
+        <div class="hero2-industries-title">Explore industry-wide solutions by DataCamp</div>
+        <div class="hero2-industry-tags">
+            <div class="hero2-industry-chip">Healthcare</div>
+            <div class="hero2-industry-chip">Finance</div>
+            <div class="hero2-industry-chip">Technology</div>
+            <div class="hero2-industry-chip">Energy</div>
+            <div class="hero2-industry-chip">Government</div>
+        </div>
+    </div>
+  </section>
+
+  <section class="hero3-section container-lg py-5">
+ 
+    <header class="hero3-header mb-4">
+      <h1 class="hero3-heading">A path for every goal</h1>
+    </header>
+
+    <div class="hero3-filters d-flex flex-wrap align-items-center gap-2 mb-4">
+      <div class="hero3-filter-group d-flex gap-2 flex-wrap">
+        <button type="button" class="hero3-filter-btn hero3-filter-active" data-filter="all">All</button>
+        <button type="button" class="hero3-filter-btn" data-filter="career">Career Tracks</button>
+        <button type="button" class="hero3-filter-btn" data-filter="skill">Skill Tracks</button>
+      </div>
+      <button type="button" class="hero3-explore-btn ">Explore Catalog</button>
+    </div>
+
+    <div class="hero3-courses-grid row g-4">
+      <!-- Course card example (repeat for each card) -->
+      <article class="hero3-course-card col-12 col-md-6 col-lg-4" data-category="all skill">
+        <div class="hero3-course-content card h-100 p-3">
+          <h2 class="hero3-course-title h5">Introduction to Python</h2>
+          <div class="hero3-course-meta d-flex gap-3 mb-2">
+            <span class="hero3-course-level badge bg-light text-dark">Basic</span>
+            <span class="hero3-course-duration text-muted">4 hr</span>
+          </div>
+          <p class="hero3-course-desc mb-3">Master the basics of data analysis with Python in just four hours. This online course will introduce the Python interface and explore popular packages.</p>
+          <a href="#" class="hero3-course-link mt-auto">See Details</a>
+        </div>
+      </article>
+
+      <article class="hero3-course-card col-12 col-md-6 col-lg-4" data-category="all skill">
+        <div class="hero3-course-content card h-100 p-3">
+          <h2 class="hero3-course-title h5">Introduction to SQL</h2>
+          <div class="hero3-course-meta d-flex gap-3 mb-2">
+            <span class="hero3-course-level badge bg-light text-dark">Basic</span>
+            <span class="hero3-course-duration text-muted">2 hr</span>
+          </div>
+          <p class="hero3-course-desc mb-3">Learn how to create and query relational databases using SQL in just two hours.</p>
+          <a href="#" class="hero3-course-link mt-auto">See Details</a>
+        </div>
+      </article>
+
+      <article class="hero3-course-card col-12 col-md-6 col-lg-4" data-category="all skill">
+        <div class="hero3-course-content card h-100 p-3">
+          <h2 class="hero3-course-title h5">Introduction to Power BI</h2>
+          <div class="hero3-course-meta d-flex gap-3 mb-2">
+            <span class="hero3-course-level badge bg-light text-dark">Basic</span>
+            <span class="hero3-course-duration text-muted">4 hr</span>
+          </div>
+          <p class="hero3-course-desc mb-3">Master the Power BI basics and learn to use the data visualization software to build impactful reports.</p>
+          <a href="#" class="hero3-course-link mt-auto">See Details</a>
+        </div>
+      </article>
+
+      <article class="hero3-course-card col-12 col-md-6 col-lg-4" data-category="all skill">
+        <div class="hero3-course-content card h-100 p-3">
+          <h2 class="hero3-course-title h5">Understanding Artificial Intelligence</h2>
+          <div class="hero3-course-meta d-flex gap-3 mb-2">
+            <span class="hero3-course-level badge bg-light text-dark">Basic</span>
+            <span class="hero3-course-duration text-muted">2 hr</span>
+          </div>
+          <p class="hero3-course-desc mb-3">Learn the basic concepts of Artificial Intelligence, such as machine learning, deep learning, NLP, generative AI, and more.</p>
+          <a href="#" class="hero3-course-link mt-auto">See Details</a>
+        </div>
+      </article>
+
+      <article class="hero3-course-card col-12 col-md-6 col-lg-4" data-category="all skill">
+        <div class="hero3-course-content card h-100 p-3">
+          <h2 class="hero3-course-title h5">Introduction to Tableau</h2>
+          <div class="hero3-course-meta d-flex gap-3 mb-2">
+            <span class="hero3-course-level badge bg-light text-dark">Basic</span>
+            <span class="hero3-course-duration text-muted">6 hr</span>
+          </div>
+          <p class="hero3-course-desc mb-3">Start your Tableau journey with our Introduction to Tableau course. Discover tableau basics such as its features and dashboards.</p>
+          <a href="#" class="hero3-course-link mt-auto">See Details</a>
+        </div>
+      </article>
+
+      <article class="hero3-course-card col-12 col-md-6 col-lg-4" data-category="all skill">
+        <div class="hero3-course-content card h-100 p-3">
+          <h2 class="hero3-course-title h5">Introduction to Excel</h2>
+          <div class="hero3-course-meta d-flex gap-3 mb-2">
+            <span class="hero3-course-level badge bg-light text-dark">Basic</span>
+            <span class="hero3-course-duration text-muted">4 hr</span>
+          </div>
+          <p class="hero3-course-desc mb-3">Master the Excel basics and learn to use this spreadsheet tool to conduct impactful analysis.</p>
+          <a href="#" class="hero3-course-link mt-auto">See Details</a>
+        </div>
+      </article>
+
+      <!-- Career Tracks -->
+      <article class="hero3-course-card col-12 col-md-6 col-lg-4" data-category="all career">
+        <div class="hero3-course-content card h-100 p-3">
+          <h2 class="hero3-course-title h5">Data Analyst in Python</h2>
+          <div class="hero3-course-meta d-flex gap-3 mb-2">
+            <span class="hero3-course-duration text-muted">0.98 hrs</span>
+          </div>
+          <p class="hero3-course-learners text-muted mb-2">At 18.8K learners</p>
+          <p class="hero3-course-desc mb-3">Develop your data analytics skills in Python. Gain the data analyst skills to manipulate, analyze, and visualize data. No coding experience required!</p>
+          <a href="#" class="hero3-course-link mt-auto">See Details</a>
+        </div>
+      </article>
+
+      <article class="hero3-course-card col-12 col-md-6 col-lg-4" data-category="all career">
+        <div class="hero3-course-content card h-100 p-3">
+          <h2 class="hero3-course-title h5">Data Engineer in Python</h2>
+          <div class="hero3-course-meta d-flex gap-3 mb-2">
+            <span class="hero3-course-duration text-muted">0.40 hrs</span>
+          </div>
+          <p class="hero3-course-learners text-muted mb-2">At 23.1K learners</p>
+          <p class="hero3-course-desc mb-3">Gain in-demand skills to efficiently ingest, clean, manage data, and schedule and monitor pipelines, setting you apart in the data engineering field.</p>
+          <a href="#" class="hero3-course-link mt-auto">See Details</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="hero4-section container-fluid py-5">
+    <div class="row align-items-center">
+      
+      <!-- Left text content -->
+      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 text-center text-lg-start">
+        <div class="hero4-report-card">
+          <h1>Download the State of Data & AI Literacy Report 2025</h1>
+          <p class="hero4-subtitle">
+            Uncover what 500+ leaders in the US & UK believe about the state of their teams’ data & AI skills
+          </p>
+          <button class="btn btn-primary hero4-download-btn" onclick="return false;">
+            Download the Report
+          </button>
+        </div>
+      </div>
+
+      <!-- Right image -->
+      <div class="col-lg-6 col-md-12 text-center">
+        <img src="images/image3.png" alt="Report Preview" class="img-fluid hero4-img">
+      </div>
+
+    </div>
+  </section>
+
+  <section class="hs5-hero-section" aria-label="Find your data and AI path">
+    <h1 class="hs5-hero-section__title">Find your data and AI path</h1>
+
+    <div class="hs5-grid">
+
+      <article class="hs5-card hs5-card--purple" aria-labelledby="hs5-c1">
+        <div class="hs5-card__media">
+          <div class="hs5-card__badge" aria-hidden="true">P</div>
+          <img src="images/image4.png" alt="person 1" class="hs5-card__image">
+          <div class="hs5-card__tag">CAREER SWITCHER</div>
+        </div>
+        <div class="hs5-card__content">
+          <div class="hs5-card__text">
+            <h3 id="hs5-c1">Break into data and AI</h3>
+            <p>Break into data and AI with zero coding experience. Our step-by-step courses and real-world projects take you from beginner to job-ready, with a portfolio that catches employers' attention.</p>
+          </div>
+          <a class="hs5-card__learn" href="#" aria-label="Learn more about breaking into data and AI">Learn More →</a>
+        </div>
+      </article>
+
+      <article class="hs5-card hs5-card--center hs5-card--green" aria-labelledby="hs5-c2">
+        <div class="hs5-card__media">
+          <div class="hs5-card__badge" aria-hidden="true">T</div>
+          <img src="images/image5.png" alt="person 2" class="hs5-card__image">
+          <div class="hs5-card__tag">TEAM LEADER</div>
+        </div>
+        <div class="hs5-card__content">
+          <div class="hs5-card__text">
+            <h3 id="hs5-c2">Transform your organization's data</h3>
+            <p>Transform your organization's data capabilities with customized learning paths and tracking features. Empower your team to drive innovation—seamlessly aligned with your tech stack and business goals.</p>
+          </div>
+          <a class="hs5-card__learn" href="#" aria-label="Learn more about transforming organization's data">Learn More →</a>
+        </div>
+      </article>
+
+      <article class="hs5-card hs5-card--yellow" aria-labelledby="hs5-c3">
+        <div class="hs5-card__media">
+          <div class="hs5-card__badge" aria-hidden="true">S</div>
+          <img src="images/image6.png" alt="person 3" class="hs5-card__image">
+          <div class="hs5-card__tag">SKILL BUILDER</div>
+        </div>
+        <div class="hs5-card__content">
+          <div class="hs5-card__text">
+            <h3 id="hs5-c3">Level up your toolkit</h3>
+            <p>Level up your toolkit with advanced data and AI techniques through self-paced courses. From automation to advanced analytics, master the skills that make you indispensable.</p>
+          </div>
+          <a class="hs5-card__learn" href="#" aria-label="Learn more about leveling up your toolkit">Learn More →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="hs6-section" aria-label="Experts showcase">
+    <h2 class="hs6-headline">Learn from <span class="hs6-highlight hs6-highlight--pink1">experts</span> at the world's <span class="hs6-highlight hs6-highlight--pink2">top organizations</span></h2>
+
+    <div class="hs6-profiles">
+
+      <!-- profile 1 --> 
+      <div class="hs6-profile" role="article" aria-labelledby="hs6-name-1">
+        <div class="hs6-avatar-wrap">
+          <figure class="hs6-avatar">
+            <img src="images/image7.jpeg" alt="Leondra Gonzalez profile">
+          </figure>
+        </div>
+
+        <div id="hs6-name-1" class="hs6-name">Leondra Gonzalez</div>
+
+        <div class="hs6-company" aria-hidden="false">
+          <svg class="hs6-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="1" y="1" width="10" height="10" fill="#f35325"/><rect x="13" y="1" width="10" height="10" fill="#7cbb00"/><rect x="1" y="13" width="10" height="10" fill="#00a1f1"/><rect x="13" y="13" width="10" height="10" fill="#ffbb00"/></svg>
+          <div class="hs6-company-name">Microsoft</div>
+        </div>
+
+        <a class="hs6-course" href="#" aria-label="Open Leondra's course">Data Storytelling Case Study: <span class="hs6-arrow">College Majors →</span></a>
+      </div>
+
+      <!-- profile 2 -->
+      <div class="hs6-profile" role="article" aria-labelledby="hs6-name-2">
+        <div class="hs6-avatar-wrap">
+          <figure class="hs6-avatar">
+            <img src="images/image8.jpeg" alt="Daniel Tedesco profile">
+          </figure>
+        </div>
+
+        <div id="hs6-name-2" class="hs6-name">Daniel Tedesco</div>
+
+        <div class="hs6-company" aria-hidden="false">
+          <svg class="hs6-logo" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" width="60" height="18" aria-hidden="true" focusable="false"><text x="0" y="14" font-family="Poppins, sans-serif" font-weight="700" font-size="14">Google</text></svg>
+          <div class="hs6-company-name">Google</div>
+        </div>
+
+        <a class="hs6-course" href="#" aria-label="Open Daniel's course">Generative AI Concepts <span class="hs6-arrow">→</span></a>
+      </div>
+
+      <!-- profile 3 -->
+      <div class="hs6-profile" role="article" aria-labelledby="hs6-name-3">
+        <div class="hs6-avatar-wrap">
+          <figure class="hs6-avatar">
+            <img src="images/image9.jpeg" alt="Aaren Stubberfield profile">
+          </figure>
+        </div>
+
+        <div id="hs6-name-3" class="hs6-name">Aaren Stubberfield</div>
+
+        <div class="hs6-company" aria-hidden="false">
+          <svg class="hs6-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="1" y="1" width="10" height="10" fill="#f35325"/><rect x="13" y="1" width="10" height="10" fill="#7cbb00"/><rect x="1" y="13" width="10" height="10" fill="#00a1f1"/><rect x="13" y="13" width="10" height="10" fill="#ffbb00"/></svg>
+          <div class="hs6-company-name">Microsoft</div>
+        </div>
+
+        <a class="hs6-course" href="#" aria-label="Open Aaren's course">Joining data with pandas <span class="hs6-arrow">→</span></a>
+      </div>
+
+      <!-- profile 4 -->
+      <div class="hs6-profile" role="article" aria-labelledby="hs6-name-4">
+        <div class="hs6-avatar-wrap">
+          <figure class="hs6-avatar">
+            <img src="images/image10.jpeg" alt="Kevin Barlow profile">
+          </figure>
+        </div>
+
+        <div id="hs6-name-4" class="hs6-name">Kevin Barlow</div>
+
+        <div class="hs6-company" aria-hidden="false">
+          <svg class="hs6-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" fill="#2b2b2b"/></svg>
+          <div class="hs6-company-name">databricks</div>
+        </div>
+
+        <a class="hs6-course" href="#" aria-label="Open Kevin's course">Introduction to Databricks <span class="hs6-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hs7-hero" aria-labelledby="hs7-hero-title">
+    <div class="hs7-inner hs7-container">
+      <div class="hs7-hero-left">
+        <figure class="hs7-hint-figure" aria-hidden="true">
+          <img src="images/image11.png" alt="AI generated hint example" />
+        </figure>
+      </div>
+
+      <aside class="hs7-hero-right" aria-labelledby="hs7-hero-right-title">
+        <h1 id="hs7-hero-title">
+          <span class="hs7-accent hs7-accent--green">AI-powered</span>
+          <span class="hs7-muted"> interactive learning that works for you</span>
+        </h1>
+        <h2 id="hs7-hero-right-title">Never get stuck with <span class="hs7-accent hs7-accent--cyan">AI</span></h2>
+        <p class="hs7-lead">
+          From tailored career advice to instant feedback and code explanation, learn smarter with built-in AI support at every step of your journey
+        </p>
+
+        <!-- CTA that doesn't do anything but has hover states -->
+        <div class="hs7-cta-row">
+          <button class="hs7-btn hs7-btn--outline" aria-label="Start Learning for Free">Start Learning for Free</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="hs7-switch" aria-labelledby="hs7-switch-title">
+    <div class="hs7-inner hs7-container hs7-switch-inner">
+      <div class="hs7-switch-left">
+        <h3 id="hs7-switch-title">
+          Switch between <span class="hs7-accent hs7-accent--bluegreen">desktop</span> and <span class="hs7-accent hs7-accent--green">mobile</span> to continue learning
+        </h3>
+        <p class="hs7-small">
+          Unlock skills faster in the DataCamp Mobile app by practicing code, watching videos, and keeping your streak alive!
+        </p>
+        <p class="hs7-small">Download DataCamp app.</p>
+
+        <div class="hs7-store-buttons">
+          <a class="hs7-store-btn" href="#" aria-label="Download on the App Store">
+            <i class="fa-brands fa-apple fa-lg" aria-hidden="true"></i>
+            <span class="hs7-store-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </span>
+          </a>
+ 
+          <a class="hs7-store-btn" href="#" aria-label="Get it on Google Play">
+            <i class="fa-brands fa-google-play fa-lg" aria-hidden="true"></i>
+            <span class="hs7-store-text">
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <figure class="hs7-devices" aria-hidden="true">
+        <img src="images/image12.png" alt="Desktop and mobile preview" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="hs8-cert-section" aria-labelledby="hs8-cert-title">
+    <div class="hs8-cert-inner hs8-container">
+      <!-- left content -->
+      <div class="hs8-cert-left">
+        <p class="hs8-eyebrow">CERTIFICATION</p>
+        <h1 id="hs8-cert-title" class="hs8-title">Land your dream job<br/>in data and AI</h1>
+        <p class="hs8-cert-desc">
+          From earning an industry-leading data or AI certification to personalized resume reviews and interview prep—we've got you covered.
+        </p>
+        <button class="hs8-btn hs8-btn--outline" aria-label="Explore Certification">Explore Certification</button>
+      </div>
+
+      <!-- right cards preview (image placeholder sized exactly as cropped) -->
+      <aside class="hs8-cert-cards" aria-hidden="true">
+        <!-- Using the combined crop for fidelity; an alternate approach uses separate card images -->
+        <img src="images/image13.png" alt="Certification journey cards" class="hs8-cert-image"/>
+      </aside>
+    </div>
+  </section>
+
+  <section class="hs9-testimonials" aria-label="HeroSection9 — Customer testimonials">
+    <div class="hs9-container">
+
+      <h2 class="hs9-section-title">Don't just take our word for it.</h2>
+
+      <!-- carousel viewport -->
+      <div class="hs9-carousel-wrapper">
+        <button class="hs9-nav hs9-nav-prev" aria-label="Previous testimonial" data-dir="-1">‹</button>
+
+        <div class="hs9-carousel-viewport" id="hs9-carousel" tabindex="0" aria-roledescription="carousel">
+          <ul class="hs9-cards" role="list">
+            <!-- Card 1 -->
+            <li class="hs9-card" data-color="#f7c744" data-initials="G">
+              <div class="hs9-card-top" style="border-top-color: #f7c744;"></div>
+              <div class="hs9-avatar" aria-hidden="true"></div>
+              <blockquote class="hs9-quote">
+                "As a manager, DataCamp helps me show my team new packages and new ways to solve problems."
+              </blockquote>
+              <p class="hs9-author">Gabriel Lopes, Business Intelligence and Analytics Manager, Hotmart</p>
+            </li>
+
+            <!-- Card 2 -->
+            <li class="hs9-card" data-color="#00e07e" data-initials="R">
+              <div class="hs9-card-top" style="border-top-color: #00e07e;"></div>
+              <div class="hs9-avatar" aria-hidden="true"></div>
+              <blockquote class="hs9-quote">
+                "We think of it as everyone's responsibility in the organization to be more data-driven..."
+              </blockquote>
+              <p class="hs9-author">Rachel Alt-Simmons, Head Of Strategic Design, Data, Pricing And Analytics, AXA XL</p>
+            </li>
+
+            <!-- Card 3 -->
+            <li class="hs9-card" data-color="#ff7a9f" data-initials="O">
+              <div class="hs9-card-top" style="border-top-color: #ff7a9f;"></div>
+              <div class="hs9-avatar" aria-hidden="true"></div>
+              <blockquote class="hs9-quote">
+                "On DataCamp, you learn from the experts. As you are taking courses, you are really learning from the best instructors in the world."
+              </blockquote>
+              <p class="hs9-author">Ofentse Lebogo, Data Scientist, CSIR</p>
+            </li>
+
+            <!-- Card 4 -->
+            <li class="hs9-card" data-color="#f7c744" data-initials="D">
+              <div class="hs9-card-top" style="border-top-color: #f7c744;"></div>
+              <div class="hs9-avatar" aria-hidden="true"></div>
+              <blockquote class="hs9-quote">
+                "I've used other sites—Coursera, Udacity, things like that—but DataCamp's been the one that I've stuck with."
+              </blockquote>
+              <p class="hs9-author">Devon Edwards Joseph, Data Engineer, Lloyd's Banking Group</p>
+            </li>
+
+            <!-- Card 5 -->
+            <li class="hs9-card" data-color="#00e07e" data-initials="S">
+              <div class="hs9-card-top" style="border-top-color: #00e07e;"></div>
+              <div class="hs9-avatar" aria-hidden="true"></div>
+              <blockquote class="hs9-quote">
+                "We've trialed a number of other online learning solutions, but only DataCamp provides the interactive experience..."
+              </blockquote>
+              <p class="hs9-author">Sarah Schlobohm, Senior Analytics Manager, HSBC</p>
+            </li>
+
+            <!-- Card 6 -->
+            <li class="hs9-card" data-color="#ff7a9f" data-initials="H">
+              <div class="hs9-card-top" style="border-top-color: #ff7a9f;"></div>
+              <div class="hs9-avatar" aria-hidden="true"></div>
+              <blockquote class="hs9-quote">
+                "DataCamp is a lot better than other online learning platforms I've tried. It takes less time, it is more efficient..."
+              </blockquote>
+              <p class="hs9-author">Harshvardhan Dhapola</p>
+            </li>
+          </ul>
+        </div>
+
+        <button class="hs9-nav hs9-nav-next" aria-label="Next testimonial" data-dir="1">›</button>
+      </div>
+
+      <!-- dots / keyboard hint (optional) -->
+      <div class="hs9-carousel-controls" aria-hidden="true">
+        <div class="hs9-dots" id="hs9-dots"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="hs10-teacher-promo" aria-labelledby="hs10-teacher-promo-heading">
+    <div class="hs10-container">
+      <div class="hs10-promo-left">
+        <h2 id="hs10-teacher-promo-heading" class="hs10-promo-title">Are you a teacher?</h2>
+        <p class="hs10-promo-desc">DataCamp Classrooms is free for you and your students</p>
+        <p>
+          <a class="hs10-cta hs10-btn-outline" href="#" role="button" aria-label="Teach with DataCamp">Teach with DataCamp</a>
+        </p>
+      </div>
+      <div class="hs10-promo-right">
+        <div class="hs10-metrics" aria-hidden="false" role="list">
+          <div class="hs10-metric" role="listitem">
+            <div class="hs10-num">1M</div>
+            <div class="hs10-label">Teachers and Students</div>
+          </div>
+
+          <div class="hs10-metric" role="listitem">
+            <div class="hs10-num">180+</div>
+            <div class="hs10-label">Countries</div>
+          </div>
+
+          <div class="hs10-metric" role="listitem">
+            <div class="hs10-num">14K+</div>
+            <div class="hs10-label">Schools</div>
+          </div>
+
+          <div class="hs10-metric" role="listitem">
+            <div class="hs10-num">6</div>
+            <div class="hs10-label">months of free access for every classroom</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hs11-hero-cta" aria-labelledby="hs11-hero-cta-heading">
+    <div class="hs11-inner">
+      <h1 id="hs11-hero-cta-heading" class="hs11-hero-title">
+        Join more than <span class="hs11-accent">17 million learners</span> worldwide
+      </h1>
+
+      <p class="hs11-hero-action">
+        <a class="hs11-cta hs11-btn-solid" href="#" role="button" aria-label="Start Learning for Free">Start Learning for Free</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="hs12-switch-section" aria-labelledby="hs12-switch-title">
+    <div class="hs12-inner hs12-container hs12-switch-inner"> 
+      <div class="hs12-switch-left">
+        <h3 id="hs12-switch-title" class="hs12-switch-heading">
+          Switch between <span class="hs12-accent-bluegreen">desktop</span> and <span class="hs12-accent-green">mobile</span> to continue learning
+        </h3>
+        <p class="hs12-small">
+          Unlock skills faster in the DataCamp Mobile app by practicing code, watching videos, and keeping your streak alive!
+        </p>
+        <p class="hs12-small">Download DataCamp app.</p>
+
+        <div class="hs12-store-buttons">
+          <a class="hs12-store-btn" href="#" aria-label="Download on the App Store">
+            <i class="fa-brands fa-apple fa-lg"></i>
+            <span class="hs12-store-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </span>
+          </a>
+
+          <a class="hs12-store-btn" href="#" aria-label="Get it on Google Play">
+            <i class="fa-brands fa-google-play fa-lg"></i>
+            <span class="hs12-store-text">
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-columns">
+        <div class="col">
+          <h4 class="col-heading">LEARN</h4>
+          <ul>
+            <li><a href="#" class="footer-link">Learn Python</a></li>
+            <li><a href="#" class="footer-link">Learn AI</a></li>
+            <li><a href="#" class="footer-link">Learn Power BI</a></li>
+            <li><a href="#" class="footer-link">Learn Data Engineering</a></li>
+            <li><a href="#" class="footer-link">Assessments</a></li>
+            <li><a href="#" class="footer-link">Career Tracks</a></li>
+            <li><a href="#" class="footer-link">Skill Tracks</a></li>
+            <li><a href="#" class="footer-link">Courses</a></li>
+            <li><a href="#" class="footer-link">Data Science Roadmap</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4 class="col-heading">DATA COURSES</h4>
+          <ul>
+            <li><a href="#" class="footer-link">Python Courses</a></li>
+            <li><a href="#" class="footer-link">R Courses</a></li>
+            <li><a href="#" class="footer-link">SQL Courses</a></li>
+            <li><a href="#" class="footer-link">Power BI Courses</a></li>
+            <li><a href="#" class="footer-link">Tableau Courses</a></li>
+            <li><a href="#" class="footer-link">Alteryx Courses</a></li>
+            <li><a href="#" class="footer-link">Azure Courses</a></li>
+            <li><a href="#" class="footer-link">AWS Courses</a></li>
+            <li><a href="#" class="footer-link">Google Sheets Courses</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4 class="col-heading">DATALAB</h4>
+          <ul>
+            <li><a href="#" class="footer-link">Get Started</a></li>
+            <li><a href="#" class="footer-link">Pricing</a></li>
+            <li><a href="#" class="footer-link">Security</a></li>
+            <li><a href="#" class="footer-link">Documentation</a></li>
+          </ul>
+
+          <h4 class="col-heading extra">CERTIFICATION</h4>
+          <ul>
+            <li><a href="#" class="footer-link">Certifications</a></li>
+            <li><a href="#" class="footer-link">Data Scientist</a></li>
+            <li><a href="#" class="footer-link">Data Analyst</a></li>
+            <li><a href="#" class="footer-link">Data Engineer</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4 class="col-heading">RESOURCES</h4>
+          <ul>
+            <li><a href="#" class="footer-link">Resource Center</a></li>
+            <li><a href="#" class="footer-link">Upcoming Events</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Code-Alongs</a></li>
+            <li><a href="#" class="footer-link">Tutorials</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4 class="col-heading">PLANS</h4>
+          <ul>
+            <li><a href="#" class="footer-link">Pricing</a></li>
+            <li><a href="#" class="footer-link">For Students</a></li>
+            <li><a href="#" class="footer-link">For Business</a></li>
+            <li><a href="#" class="footer-link">For Universities</a></li>
+            <li><a href="#" class="footer-link">Discounts, Promos &amp; Sales</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4 class="col-heading">ABOUT</h4>
+          <ul>
+            <li><a href="#" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Learner Stories</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Become an Instructor</a></li>
+            <li><a href="#" class="footer-link">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4 class="col-heading">FOR BUSINESS</h4>
+          <ul>
+            <li><a href="#" class="footer-link">Business Pricing</a></li>
+            <li><a href="#" class="footer-link">Teams Plan</a></li>
+            <li><a href="#" class="footer-link">Data &amp; AI Unlimited Plan</a></li>
+            <li><a href="#" class="footer-link">Customer Stories</a></li>
+          </ul>
+
+          <h4 class="col-heading extra">SUPPORT</h4>
+          <ul>
+            <li><a href="#" class="footer-link">Help Center</a></li>
+            <li><a href="#" class="footer-link">Become an Affiliate</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="logo-wrap">
+          <a href="#" class="logo-link" aria-label="Clear as Data logo">
+            <!-- SVG stroke color updated to match the original logo -->
+            <svg class="logo" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <path d="M10 60 L10 20 L40 40 L70 20 L70 60 L40 40 Z"
+                    fill="none"
+                    stroke="#02E45E"
+                    stroke-width="4.8"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"></path>
+            </svg>
+          </a>
+          <div class="logo-text">DataCamp</div>
+        </div>
+
+        <div class="legal-and-links">
+          <div class="legal-links">
+            <a href="#" class="footer-link small">Privacy Policy</a>
+            <a href="#" class="footer-link small">Cookie Notice</a>
+            <a href="#" class="footer-link small">Do Not Sell My Personal Information</a>
+            <a href="#" class="footer-link small">Accessibility</a>
+            <a href="#" class="footer-link small">Security</a>
+            <a href="#" class="footer-link small">Terms of Use</a>
+          </div>
+
+          <div class="copyright">© 2025 DataCamp, Inc. All Rights Reserved.</div>
+        </div>
+
+        <div class="socials">
+          <a href="#" class="social" aria-label="facebook" title="facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12H20l-1.5 2.9V22A10 10 0 0022 12z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="x" title="x">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.7L12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3 10.6 10.6 16.9 4.3z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="linkedin" title="linkedin">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11.02 0zM3 8h4v12H3zM9 8h3.7v1.63h.05c.52-.99 1.8-2.03 3.72-2.03C20.5 7.6 21 10 21 13.12V20H17v-6.1c0-1.46-.03-3.34-2.04-3.34-2.05 0-2.36 1.6-2.36 3.22V20H9V8z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="youtube" title="youtube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 8s-.2-1.4-.8-2c-.8-.9-1.7-1-2.2-1.1C15.8 4.5 12 4.5 12 4.5h0s-3.8 0-6.9.4c-.5.1-1.4.2-2.2 1.1C2.2 6.6 2 8 2 8S2 9.8 2 11.6v.8C2 14.2 2.2 16 2.2 16s.2 1.4.8 1.9c.8.9 1.9 1 2.4 1.1 1.7.2 7.6.4 7.6.4s3.8 0 6.9-.4c.5-.1 1.4-.2 2.2-1.1.6-.5.8-1.9.8-1.9s.2-1.8.2-3.6v-.8C22 9.8 22 8 22 8z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="instagram" title="instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.7A4.3 4.3 0 1016.3 13 4.3 4.3 0 0012 8.7zm5.5-2.8a1.1 1.1 0 11-1.1 1.1 1.1 1.1 0 011.1-1.1z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script/main.js"></script>
+
+</body>
+</html>

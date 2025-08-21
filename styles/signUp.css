@@ -1,0 +1,196 @@
+/* === Single-column, centered layout (logo -> form -> sign-in) === */
+
+body {
+  background: #1a2332;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background decorative circles (unchanged) */
+.bg-circle { position: absolute; border-radius: 50%; z-index: 1; }
+.circle-1 { width: 300px; height: 300px; background: linear-gradient(135deg, #8b5cf6, #06b6d4); top: -150px; left: -150px; }
+.circle-2 { width: 200px; height: 200px; background: linear-gradient(135deg, #06b6d4, #8b5cf6); top: 50px; right: -100px; }
+.circle-3 { width: 250px; height: 250px; background: linear-gradient(135deg, #8b5cf6, #06b6d4); bottom: -125px; left: -125px; }
+.circle-4 { width: 350px; height: 350px; background: linear-gradient(135deg, #06b6d4, #8b5cf6); bottom: -175px; right: -175px; }
+.circle-5 { width: 180px; height: 180px; background: linear-gradient(135deg, #8b5cf6, #06b6d4); top: 200px; right: 50px; }
+
+/* container: single column always, centered */
+.main-container {
+  position: relative;
+  z-index: 10;
+  min-height: 72vh;          /* reduced vertical footprint */
+  max-width: 820px;         /* shared constraint so form & sign-in align */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;    /* ALWAYS column */
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  gap: 0.9rem;
+  box-sizing: border-box;
+}
+
+/* force the visual order regardless of HTML order */
+.logo { 
+  order: 1; 
+  width: 250px; 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+}
+
+/* form sits directly below logo */
+.form-container {
+  order: 2;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 500px;         /* form constrained to match container */
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  box-sizing: border-box;
+  transition: transform .12s ease;
+}
+
+.form-container:hover { transform: translateY(-4px); }
+
+.form-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.form-label {
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.98rem;
+  transition: border-color 0.2s ease;
+  margin-bottom: 0.85rem;
+}
+
+.form-control:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.08);
+}
+
+.password-container { position: relative; }
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn-primary {
+  background: #10b981;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease, transform .08s ease;
+}
+
+.btn-primary:hover { background: #059669; transform: translateY(-1px); }
+
+.social-divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Unified social button colors per your request */
+.social-btn {
+  flex: 1;
+  padding: 0.6rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: #ff0000;    /* user-specified background */
+  color: #39FF14;        /* user-specified icon/text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.18s ease, color 0.18s ease, transform .08s ease;
+  box-sizing: border-box;
+}
+
+.social-btn:hover {
+  background: #39FF14;
+  color: #ff0000;
+  transform: translateY(-2px);
+}
+
+/* last section (sign-in / helper) below the form */
+.sign-in-container {
+  order: 3;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.1rem;
+  width: 100%;
+  max-width: 500px;        /* same width as form */
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  margin-top: 0.25rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.sign-in-text {
+  color: #6b7280;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.sign-in-text a {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sign-in-text a:hover { text-decoration: underline; }
+
+.terms-text {
+  font-size: 0.79rem;
+  color: #6b7280;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+.terms-text a { color: #10b981; text-decoration: none; }
+.terms-text a:hover { text-decoration: underline; }
+
+/* small-screen adjustments */
+@media (max-width: 768px) {
+  .main-container { padding: 1rem; min-height: 85vh; }
+  .form-container { padding: 1.5rem 1rem; }
+  .social-buttons { gap: 0.5rem; }
+}

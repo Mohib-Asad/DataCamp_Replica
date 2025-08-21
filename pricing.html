@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pricing — Join & Grow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/pricing.css">
+</head>
+<body>
+  <main class="pricing-section">
+    <div class="container">
+      <header class="pricing-header">
+        <p class="eyebrow">Simple pricing • No surprises</p>
+        <h1>Plans made for growth</h1>
+        <p class="lead">Choose a plan that fits you — scale when you're ready. All plans include 24/7 support, secure backups and a 14‑day money‑back guarantee.</p>
+
+        <div class="billing-toggle" role="radiogroup" aria-label="Billing period">
+          <span class="label">Monthly</span>
+          <label class="switch" aria-checked="false" tabindex="0">
+            <input type="checkbox" id="billing">
+            <span class="toggle-knob" aria-hidden="true"></span>
+          </label>
+          <span class="label">Yearly <span class="save">— save 20%</span></span>
+        </div>
+      </header>
+
+      <section class="pricing-grid" id="pricingGrid" aria-live="polite">
+        <!-- Starter -->
+        <article class="pricing-card card-standalone" data-plan="starter" tabindex="0">
+          <div class="card-ribbon">Best for hobby</div>
+          <div class="card-body">
+            <div>
+              <h3 class="card-title">Starter</h3>
+              <p class="card-sub">Everything you need to get started.</p>
+              <div class="price" data-monthly="9" data-yearly="86">
+                <span class="currency">$</span>
+                <span class="amount">9</span>
+                <span class="period">/mo</span>
+              </div>
+            </div>
+
+            <ul class="features">
+              <li>1 project</li>
+              <li>Basic analytics</li>
+              <li>Community support</li>
+              <li>1 GB storage</li>
+            </ul>
+
+            <div class="card-cta">
+              <button class="btn primary" data-action="select">Get Started</button>
+              <button class="btn ghost" aria-label="Compare features">Compare</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pro -->
+        <article class="pricing-card card-popular" data-plan="pro" tabindex="0">
+          <div class="card-ribbon popular">Popular</div>
+          <div class="card-body">
+            <div>
+              <h3 class="card-title">Pro</h3>
+              <p class="card-sub">For creators and small teams scaling fast.</p>
+              <div class="price" data-monthly="29" data-yearly="278">
+                <span class="currency">$</span>
+                <span class="amount">29</span>
+                <span class="period">/mo</span>
+              </div>
+            </div>
+
+            <ul class="features">
+              <li>Unlimited projects</li>
+              <li>Advanced analytics</li>
+              <li>Priority support</li>
+              <li>50 GB storage</li>
+              <li><strong>Team seats</strong> (up to 5)</li>
+            </ul>
+
+            <div class="card-cta">
+              <button class="btn primary" data-action="select">Start Free Trial</button>
+              <button class="btn ghost">Contact Sales</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Enterprise -->
+        <article class="pricing-card card-enterprise" data-plan="enterprise" tabindex="0">
+          <div class="card-ribbon">Enterprise</div>
+          <div class="card-body">
+            <div>
+              <h3 class="card-title">Enterprise</h3>
+              <p class="card-sub">Custom solutions, SLAs, and dedicated support.</p>
+              <div class="price" data-monthly="79" data-yearly="754">
+                <span class="currency">$</span>
+                <span class="amount">79</span>
+                <span class="period">/mo</span>
+              </div>
+            </div>
+
+            <ul class="features">
+              <li>Custom integrations</li>
+              <li>SLA & dedicated success manager</li>
+              <li>Unlimited storage & seats</li>
+              <li>Single sign-on (SSO)</li>
+            </ul>
+
+            <div class="card-cta">
+              <button class="btn primary" data-action="contact">Contact Us</button>
+              <button class="btn ghost">Request Demo</button>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <p class="pricing-note">All prices shown in USD. Taxes calculated at checkout. <a href="#" class="muted-link">See full terms</a></p>
+
+      <section class="perks">
+        <h4>Perks of joining</h4>
+        <ul class="perks-list">
+          <li>Onboarding session with experts</li>
+          <li>Weekly tips & templates</li>
+          <li>Access to private community</li>
+          <li>Seamless upgrades — no downtime</li>
+          <li>Safe & encrypted — SOC2 compliant</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+  <script src="script/pricing.js"></script>
+</body>
+</html>

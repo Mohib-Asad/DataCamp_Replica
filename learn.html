@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataCamp - Learn</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/learn.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg header">
+      <div class="navbar-container d-flex align-items-center justify-content-between w-100">
+          <a class="navbar-brand" href="#">
+              <div class="brand-icon">
+                  <img class="logo" src="images/DataCamp_idT7jV3n4Y_0.svg">
+              </div>
+          </a>
+          
+          <div class="d-flex align-items-center">
+              <div class="navbar-nav d-flex flex-row align-items-center me-4">
+                  <a class="nav-link" href="dashboard.html">Home</a>
+                  <a class="nav-link active" href="#">Learn</a>
+                  <a class="nav-link" href="#">Certification</a>
+                  <a class="nav-link" href="#">Sandbox</a>
+                  <a class="nav-link" href="#">DataLab <span style="background: #ef4444; color: white; font-size: 10px; padding: 2px 6px; border-radius: 3px; margin-left: 4px;">2</span></a>
+              </div>
+              
+              <div class="header-icons">
+                  <input type="search" class="search-input" placeholder="Search">
+                  
+                  <button class="btn upgrade-btn">Upgrade</button>
+                  
+                  <div class="dropdown">
+                      <button class="btn notification-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fas fa-bell"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end notification-dropdown">
+                          <div class="notification-item">
+                              <div class="notification-title"><i class="fas fa-rocket" style="color: #f59e0b; margin-right: 8px;"></i>Master BI tools like Excel, Power BI, Tableau & Alteryx to make smarter decisions. Explore our popular resources today.</div>
+                              <div class="notification-time">13 hours ago</div>
+                          </div>
+                          <div class="notification-item">
+                              <div class="notification-title">Continue learning on mobile</div>
+                              <div class="notification-time">1 month ago</div>
+                          </div>
+                          <div class="notification-item">
+                              <div class="notification-title">Hasnain Muavia invited you to the group 'Hasnain Muavia 2025-2'</div>
+                              <div class="notification-time">1 month ago</div>
+                          </div>
+                          <a href="#" class="view-all-btn">View All Notifications</a>
+                      </div>
+                  </div>
+                  
+                  <span class="text-muted"><i class="fas fa-globe"></i> EN</span>
+                  
+                  <div class="dropdown">
+                      <button class="btn profile-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          M
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="fas fa-user"></i> My Portfolio</a>
+                          <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Account Settings</a>
+                          <a class="dropdown-item" href="#"><i class="fas fa-question-circle"></i> Support</a>
+                          <a class="dropdown-item" href="#"><i class="fas fa-book"></i> My Library</a>
+                          <a class="dropdown-item" href="#" style="color: #8b5cf6;"><i class="fas fa-rocket"></i> Upgrade</a>
+                          <hr class="dropdown-divider">
+                          <a class="dropdown-item" href="signup.html"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+      <div class="sidebar-section">
+          <div class="sidebar-title">Progress</div>
+          <a href="#" class="sidebar-item">
+              <i class="fas fa-chart-line"></i>
+              My Ramp
+          </a>
+          <a href="#" class="sidebar-item active">
+              <i class="fas fa-graduation-cap"></i>
+              My Learning
+              <span class="new-badge">NEW</span>
+          </a>
+      </div>
+      
+      <div class="sidebar-section">
+          <div class="sidebar-title">Learn</div>
+          <button class="sidebar-item">
+              <i class="fas fa-play"></i>
+              Tracks
+              <i class="fas fa-chevron-down" style="margin-left: auto; font-size: 12px;"></i>
+          </button>
+          <a href="#" class="sidebar-item">
+              <i class="fas fa-book"></i>
+              Courses
+          </a>
+          <a href="#" class="sidebar-item">
+              <i class="fas fa-dumbbell"></i>
+              Practice
+          </a>
+      </div>
+      
+      <div class="sidebar-section">
+          <div class="sidebar-title">Assessments</div>
+          <a href="#" class="sidebar-item">
+              <i class="fas fa-file-alt"></i>
+              Tutorials
+          </a>
+      </div>
+      
+      <div class="sidebar-section">
+          <div class="sidebar-title">Apply</div>
+          <a href="#" class="sidebar-item">
+              <i class="fas fa-globe"></i>
+              Real World Projects
+          </a>
+          <a href="#" class="sidebar-item">
+              <i class="fas fa-code"></i>
+              Code Alongs
+          </a>
+          <a href="#" class="sidebar-item">
+              <i class="fas fa-trophy"></i>
+              Competitions
+          </a>
+      </div>
+      
+      <div class="sidebar-section">
+          <div class="sidebar-title">Popular Topics</div>
+          <span class="new-badge" style="margin-left: 24px; margin-bottom: 12px; display: block;">NEW</span>
+          <a href="#" class="popular-item">
+              <i class="fab fa-python"></i>
+              Python
+          </a>
+          <a href="#" class="popular-item">
+              <i class="fas fa-chart-bar"></i>
+              Data Analysis
+          </a>
+          <a href="#" class="popular-item">
+              <i class="fas fa-robot"></i>
+              Machine Learning
+          </a>
+          <a href="#" class="popular-item">
+              <i class="fas fa-database"></i>
+              SQL
+          </a>
+      </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+      <div class="welcome-section">
+          <div class="profile-info">
+              <div class="profile-avatar">M</div>
+              <div class="profile-text">
+                  <h3>Hey, Mohib!</h3>
+                  <p>Portfolio 60% completed <i class="fas fa-arrow-right" style="font-size: 12px; margin-left: 6px;"></i></p>
+              </div>
+              <div class="profile-badges">
+                  <div class="review-badge">
+                      <i class="fas fa-star"></i>
+                      Review
+                  </div>
+                  <div class="streak-badge">
+                      <i class="fas fa-fire"></i>
+                      Daily Streak
+                  </div>
+              </div>
+          </div>
+          
+          <div class="track-info">
+              <p>You're enrolled in the <strong>Associate Data Scientist in Python</strong> track.</p>
+          </div>
+      </div>
+
+      <div class="learn-section">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+              <div style="color: #64748b; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">LEARN</div>
+          </div>
+          <div class="learn-header">
+              <div class="learn-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="learn-info">
+                  <h5>Introduction to Python</h5>
+                  <p><i class="fas fa-clock" style="margin-right: 6px;"></i> Beginner • 3h 55 min to go</p>
+              </div>
+              <button class="btn progress-btn">Keep Making Progress</button>
+          </div>
+          
+          <div class="assessment-section">
+              <div class="assessment-text">
+                  <strong>Already know this?</strong><br>
+                  Take an assessment to verify your skill level and skip this course.
+              </div>
+              <button class="btn assessment-btn">
+                  Introduction to Python <i class="fas fa-arrow-right" style="font-size: 12px;"></i>
+              </button>
+          </div>
+      </div>
+
+      <div class="practice-apply-section">
+          <div class="practice-card">
+              <div class="card-icon">
+                  <i class="fas fa-dumbbell"></i>
+              </div>
+              <div class="card-content">
+                  <div class="card-label">Practice</div>
+                  <div class="card-title">Introduction to Python</div>
+              </div>
+              <div class="card-arrow">
+                  <i class="fas fa-arrow-right"></i>
+              </div>
+          </div>
+          
+          <div class="apply-card">
+              <div class="card-icon">
+                  <i class="fas fa-play"></i>
+              </div>
+              <div class="card-content">
+                  <div class="card-label">Apply</div>
+                  <div class="card-title">Investigating Netflix Movies</div>
+              </div>
+              <div class="card-arrow">
+                  <i class="fas fa-arrow-right"></i>
+              </div>
+          </div>
+      </div>
+
+      <div class="course-list">
+          <div class="section-header">
+              <h5 class="section-title">
+                  <i class="fas fa-bookmark"></i>
+                  Pick up where you left off
+              </h5>
+              <a href="#" class="see-all-link">See All in My Library</a>
+          </div>
+          
+          <div class="course-item">
+              <div class="course-info">
+                  <div class="course-icon">P</div>
+                  <div class="course-details">
+                      <h6>Introduction to Python</h6>
+                      <p>0%</p>
+                  </div>
+              </div>
+              <div class="course-actions">
+                  <button class="btn practice-btn-small">Practice</button>
+                  <button class="btn continue-btn">Continue</button>
+              </div>
+          </div>
+          
+          <div class="course-item">
+              <div class="course-info">
+                  <div class="course-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">U</div>
+                  <div class="course-details">
+                      <h6>Understanding Data Science</h6>
+                      <p>15%</p>
+                  </div>
+              </div>
+              <div class="course-actions">
+                  <button class="btn practice-btn-small">Practice</button>
+                  <button class="btn continue-btn">Continue</button>
+              </div>
+          </div>
+      </div> 
+
+      <div class="bottom-section">
+          <h5 class="bottom-title">Looking for something new?</h5>
+          <div class="bottom-links">
+              <a href="#" class="bottom-link">Career Tracks <i class="fas fa-arrow-right"></i></a>
+              <a href="#" class="bottom-link">Skill Tracks <i class="fas fa-arrow-right"></i></a>
+              <a href="#" class="bottom-link">Courses <i class="fas fa-arrow-right"></i></a>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
